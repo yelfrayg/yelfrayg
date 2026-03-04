@@ -24,11 +24,11 @@
             "link": "https://yasabi04.github.io/praxisprojekt-ss-2025/Prototyp/frontend/html/"
         },
         {
-            "title": "Bachelor",
-            "description": "Let's see what's going to happen :)",
+            "title": "Bachelor Thesis",
+            "description": "Comparison between server deployment and serverless Computing via receiving and tracking flight data.",
             "year": "in development",
             "image": "/img/temp-photo.jfif",
-            "technologies": [],
+            "technologies": ["JavaScript","AWS Lambda", "AWS API Gateway", "DynamoDB"],
             "link": "#"
         }
     ]

@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const projectElement = document.createElement("div");
                 // projectElement.href = project.link;
                 projectElement.classList.add("project");
-                projectElement.style.transform = `rotate(${Math.floor(Math.random(0, 1) * 11) - 5}deg)`;
+                projectElement.style.transform = `rotate(${Math.floor(Math.random(0, 1) * 11) - 3}deg)`;
                 projectElement.innerHTML = `
                     <p class="p-number">${counter}</p>
                     <section class="p-section">
