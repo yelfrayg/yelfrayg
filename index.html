@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
@@ -19,11 +19,9 @@
     <body>
         <header>
             <h1 class="logo">yelfrayg.</h1>
-            <ul class="data-group">
-                <li class="data-day"></li>
-                <li class="data-date"></li>
-                <li class="data-time"></li>
-            </ul>
+            <div class="light-switch">
+                <img src="/img/my-lightning.svg" alt="Switch" />
+            </div>
         </header>
         <main>
             <aside>
@@ -35,116 +33,119 @@
                 </ul>
             </aside>
 
-            <h2 class="chapter" id="01">01</h2>
-            <section class="intro">
-                <h3 class="intro-heading">Hi!</h3>
-                <p class="intro-text fade-in-section">
-                    my name is Yassin. I'm a 21 year-old german, who is
-                    currently studying
-                    <a
-                        href="https://www.medieninformatik.th-koeln.de/"
-                        class="link"
-                        >media informatics</a
-                    >
-                    at TH Cologne.
-                </p>
-                <!-- <p class="intro-text">
-                <span class="fade-in">I try to </span>
-                <span class="highlight-word">solve problems</span>
-                <span class="fade-in"> people actually have - not ones dreamt up in an eco-allotment coffee shop.</span>
-            </p> -->
-                <p class="intro-text">
-                    I build things that
-                    <span class="highlight-word">work</span>. Shocking Concept,
-                    I know.
-                </p>
-                <p class="intro-text">
-                    Currently focussing on
-                    <span class="highlight-word">WebDev</span> and
-                    <span class="highlight-word">Backend Technologies!</span>
-                </p>
-            </section>
+            <div class="container">
+                <div class="row align-left">
+                    <div class="content-box">
+                        <span class="number" id="01">01</span>
+                        <h2>HI THERE!</h2>
+                    </div>
+                </div>
 
-            <h2 class="chapter" id="02">02</h2>
-            <section class="intro">
-                <h3 class="intro-heading">About me</h3>
-                <p class="intro-text fade-in-section">
-                    I am a <span class="highlight-word">developer</span> with a
-                    focus on creating innovative solutions that
-                    <span class="highlight-word">make a difference</span>.
-                </p>
-                <p class="intro-text">
-                    After graduating from school in 2022, I immediately started
-                    studying at
-                    <a href="https://www.th-koeln.de/" class="link"
-                        >TH Cologne</a
-                    >. Within the past three years, I encountered many ...
-                </p>
-            </section>
+                <div class="row align-right">
+                    <section class="intro">
+                        <p class="intro-text">
+                            My name is Yassin and I'm a 21-year old German. I am
+                            currently focussing on Web Development and Backend
+                            Technologies. After graduating from high school in
+                            2022, I started studying media informatics at TH
+                            Cologne, where this year I received my bachelors
+                            degree.
+                        </p>
+                    </section>
+                </div>
 
-            <h2 class="chapter" id="03">03</h2>
-            <section class="intro-about">
-                <h3 class="intro-heading">My latest projects</h3>
-                <p class="intro-text">
-                    By clicking on each card, you will be redirected to the
-                    repository on <span class="highlight-word">GitHub</span>.
-                </p>
-                <div class="project-container"></div>
-            </section>
+                <div class="row align-left">
+                    <div class="content-box">
+                        <span class="number" id="02">02</span>
+                        <h2>ABOUT ME</h2>
+                    </div>
+                </div>
 
-            <h2 class="chapter" id="04">04</h2>
-            <section class="connect">
-                <h4 class="connect-slogan">
-                    Ready to start something
-                    <span class="highlight-word">Great?</span>Let's connect!
-                </h4>
-                <form
-                    action="https://formsubmit.co/deine-email@domain.com"
-                    method="POST"
-                    class="contact-form"
-                >
-                    <input
-                        type="text"
-                        name="name"
-                        required
-                        class="form-name"
-                        placeholder="Name"
-                    />
-                    <input
-                        type="email"
-                        name="email"
-                        required
-                        class="form-email"
-                        placeholder="Email"
-                    />
-                    <input
-                        type="text"
-                        name="company"
-                        class="form-company"
-                        placeholder="Company"
-                    />
-                    <textarea
-                        name="message"
-                        required
-                        class="form-message"
-                        placeholder="Your message"
-                    ></textarea>
-                    <button type="submit" class="form-submit">
-                        Send Message
-                    </button>
-                </form>
-            </section>
-            <div class="advisor-banner">
-                <h4 class="advisor-heading">Note</h4>
-                <p class="advisor-text">
-                    For better accessibility and readability at night, I decided
-                    to provide this website with an automatic color switch.
-                </p>
-                <button class="advisor-button">X</button>
+                <div class="row align-right">
+                    <section class="intro">
+                        <p class="intro-text">
+                            My name is Yassin and I'm a 21-year old German. I am
+                            currently focussing on Web Development and Backend
+                            Technologies. After graduating from high school in
+                            2022, I started studying media informatics at TH
+                            Cologne, where this year I received my bachelors
+                            degree.
+                        </p>
+                    </section>
+                </div>
+
+                <div class="row align-left">
+                    <div class="content-box">
+                        <span class="number" id="03">03</span>
+                        <h2>PROJECTS</h2>
+                    </div>
+                </div>
+                <div class="row align-right">
+                    <section class="project-container">
+                        <div class="product-card">
+                            <div class="img-container">
+                                <img src="/img/placeholder.jpg" alt="Project Image" />
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-title">Test</h3>
+                                <p class="project-description">
+                                    Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit. Donec vel sapien eget nunc
+                                    efficitur tincidunt.
+                                </p>
+                                <a href="#">Zum Repo!</a>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="row align-left">
+                    <div class="content-box">
+                        <span class="number" id="04">04</span>
+                        <h2>CONTACT</h2>
+                    </div>
+                </div>
+
+                <div class="row align-right">
+                    <section class="connect">
+                        <form
+                            action="https://formsubmit.co/deine-email@domain.com"
+                            method="POST"
+                            class="contact-form"
+                        >
+                            <input
+                                type="text"
+                                name="name"
+                                required
+                                class="form-name"
+                                placeholder="Name"
+                            />
+                            <input
+                                type="email"
+                                name="email"
+                                required
+                                class="form-email"
+                                placeholder="Email"
+                            />
+                            <input
+                                type="text"
+                                name="company"
+                                class="form-company"
+                                placeholder="Company"
+                            />
+                            <textarea
+                                name="message"
+                                required
+                                class="form-message"
+                                placeholder="Your message"
+                            ></textarea>
+                            <button type="submit" class="form-submit">
+                                Send Message
+                            </button>
+                        </form>
+                    </section>
+                </div>
             </div>
         </main>
-        <footer></footer>
-        <script src="./script.js"></script>
-        <script src="./fetch.js"></script>
     </body>
 </html>
