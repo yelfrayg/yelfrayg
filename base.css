@@ -3,6 +3,7 @@
     --color-bg: #ffffff;
     --color-primary: #414141;
     --color-secondary: #8b44444b;
+    --color-chapter-number: #c9c9c956;
 
     --font-weight-slim: 400;
     --font-weight-medium: 550;
@@ -52,28 +53,53 @@ main {
         bottom: 30%;
         right: 0;
         padding-right: var(--size-s);
+        transition: bottom 0.3s ease-in-out;
 
         .menu {
             display: flex;
             flex-direction: column;
-            gap: var(--size-m);
+            gap: var(--size-xl);
+            align-items: flex-start;
             list-style-type: none;
+            
+            .menu-button-li {
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+                height: 100%;
+
+                .menu-button {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100%;
+                    aspect-ratio: 1/1;
+                    border-color: var(--color-heading);
+                    color: var(--color-heading);
+                    border: 1px solid var(--color-heading);
+                    padding: var(--size-s);
+                    background-color: var(--color-bg);
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: var(--color-heading);
+                        color: var(--color-bg);
+                    }
+                }
+            }
 
             a {
+                display: block;
                 color: var(--color-primary);
                 font-size: var(--size-s);
                 text-decoration: none;
-                font-weight: var(--font-weight-medium);
+                font-weight: var(--font-weight-light);
                 text-transform: uppercase;
+                transition: 0.3s ease-in-out;
 
-                &::before {
-                    content: "";
-                    display: inline-block;
-                    width: 10px;
-                    height: 10px;
-                    background-color: var(--color-primary);
-                    border-radius: 50%;
-                    margin-right: 10px;
+                &:hover {
+                    color: var(--color-heading);
+                    transform: translateX(10px);
                 }
             }
         }
@@ -129,17 +155,24 @@ main {
         top: 60%;
         right: 10%;
         font-size: var(--size-heading);
+        color: var(--color-primary);
+        font-weight: var(--font-weight-slim);
     }
 
     .number {
+        display: block;
+        font-weight: var(--font-weight-bold);
         font-size: var(--size-chapter);
-        color: rgb(135, 122, 122);
+        color: var(--color-chapter-number);
+        text-box-trim: trim-both;
+        text-box-edge: cap alphabetic !important;
+        padding-bottom: var(--size-s);
     }
 }
 
 .intro {
     .intro-text {
-        font-size: var(--size-l);
+        font-size: var(--size-m);
         color: var(--color-primary);
         font-weight: var(--font-weight-slim);
         letter-spacing: 10%;
