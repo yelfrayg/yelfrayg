@@ -4,7 +4,7 @@
             "title": "OmniMize",
             "description": "Web application that optimizes photos in terms of size for web use.",
             "year": 2024,
-            "image": "/img/omnimize.png",
+            "image": "./img/omnimize.png",
             "technologies": [
                 "HTML",
                 "CSS",
@@ -21,7 +21,7 @@
             "title": "SETTLE",
             "description": "Web application for translating and explaining legal documents into different languages using AI.",
             "year": 2025,
-            "image": "/img/photo-log-yassin-el-fraygui-2025-10-16-08.png",
+            "image": "./img/photo-log-yassin-el-fraygui-2025-10-16-08.png",
             "technologies": [
                 "HTML",
                 "CSS",
