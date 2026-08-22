@@ -5,31 +5,53 @@
             "description": "Web application that optimizes photos in terms of size for web use.",
             "year": 2024,
             "image": "/img/omnimize.png",
-            "technologies": ["HTML", "CSS", "JavaScript", "Node.js", "MailerSend", "Sharp"],
-            "link": "https://github.com/MaximilianKellner/ep-2024-web-development"
-        },
-        {
-            "title": "Proxy Parcelbox",
-            "description": "Web application for managing and tracking personal projects.",
-            "year": 2024,
-            "technologies": ["HTML", "CSS", "JavaScript", "PostgreSQL", "MailerSend", "Docker"],
-            "link": "#"
+            "technologies": [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "Node.js",
+                "MailerSend",
+                "Sharp"
+            ],
+            "links": {
+                "repo": "https://github.com/MaximilianKellner/ep-2024-web-development"
+            }
         },
         {
             "title": "SETTLE",
-            "description": "Web application for translating legal documents into diff. languages.",
+            "description": "Web application for translating and explaining legal documents into different languages using AI.",
             "year": 2025,
             "image": "/img/photo-log-yassin-el-fraygui-2025-10-16-08.png",
-            "technologies": ["HTML", "CSS", "JavaScript", "Node.js", "DeepL", "Prisma Postgres", "Ollama", "Docker"],
-            "link": "https://yasabi04.github.io/praxisprojekt-ss-2025/Prototyp/frontend/html/"
+            "technologies": [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "Node.js",
+                "DeepL",
+                "Prisma Postgres",
+                "Ollama",
+                "Docker"
+            ],
+            "links": {
+                "repo": "https://github.com/yelfrayg/praxisprojekt-ss-2025",
+                "website": "https://yasabi04.github.io/praxisprojekt-ss-2025/Prototyp/frontend/html/"
+            }
         },
         {
-            "title": "Bachelor Thesis",
+            "title": "aurora - Bachelor Thesis",
             "description": "Comparison between server deployment and serverless Computing via receiving and tracking flight data.",
-            "year": "in development",
-            "image": "/img/temp-photo.jfif",
-            "technologies": ["JavaScript","AWS Lambda", "AWS API Gateway", "DynamoDB"],
-            "link": "https://yelfrayg.github.io/bachelor-el-fraygui-25-26/frontend/map.html"
+            "year": "2025/26",
+            "image": "./img/bachelor.png",
+            "technologies": [
+                "JavaScript",
+                "AWS Lambda",
+                "AWS API Gateway",
+                "DynamoDB"
+            ],
+            "links": {
+                "repo": "https://github.com/yelfrayg/bachelor-el-fraygui-25-26",
+                "website": "https://yelfrayg.github.io/bachelor-el-fraygui-25-26/frontend/map.html"
+            }
         }
     ]
 }

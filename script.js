@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
     const lightSwitch = document.querySelector(".light-switch");
 
+    updateCursor("#000000");
+
     lightSwitch.addEventListener("click", (_) => {
         if (lightSwitch.classList.contains("night")) {
             lightSwitch.classList.remove("night");
@@ -14,6 +16,27 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     toggleMenu();
+});
+
+// Wenn nach unten gescrollt wird soll der Header verschwinden und beim nach oben scrollen wieder erscheinen
+
+let lastScrollY = window.scrollY;
+const header = document.getElementById('header');
+
+window.addEventListener('scroll', () => {
+  const currentScrollY = window.scrollY;
+
+  // Verhindert negatives Scrollen (z. B. Elastic Scrolling auf iOS)
+  if (currentScrollY < 0) return;
+
+  // Nach unten scrollen -> Verstecken | Nach oben scrollen -> Zeigen
+  if (currentScrollY > lastScrollY && currentScrollY > 80) {
+    header.classList.add('header--hidden');
+  } else {
+    header.classList.remove('header--hidden');
+  }
+
+  lastScrollY = currentScrollY;
 });
 
 function switchMode(color) {
@@ -45,6 +68,15 @@ function switchMode(color) {
     Object.entries(selectedTheme).forEach(([property, value]) => {
         root.style.setProperty(property, value);
     });
+
+    updateCursor(selectedTheme["--color-heading"]);
+}
+
+function updateCursor(color) {
+    const cursorSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 8 8"><circle cx="4" cy="4" r="2" fill="${color}"/></svg>`;
+    const cursorUrl = `url("data:image/svg+xml,${encodeURIComponent(cursorSvg)}") 4 4, auto`;
+
+    document.body.style.cursor = cursorUrl;
 }
 
 function toggleMenu() {

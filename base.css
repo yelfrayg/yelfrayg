@@ -32,18 +32,42 @@ body {
     margin: 0;
     font-family: "Figtree", sans-serif;
     background-color: var(--color-bg);
+    cursor:
+        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 8 8"><circle cx="4" cy="4" r="2" fill="var(--color-bg)"/></svg>')
+            4 4,
+        auto;
 }
 
 header {
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
     margin: 0 auto;
-    width: 90%;
-    max-width: 90%;
+    width: 100%;
+    backdrop-filter: blur(10px);
     padding-top: var(--size-m);
+    padding-left: calc(3 * var(--size-xl));
+    padding-right: calc(3 * var(--size-xl));
     color: var(--color-heading);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    transform: translateY(0);
+    transition: transform 0.3s ease-in-out;
+
+    .day {
+        fill: black;
+    }
+
+    .night {
+        fill: white;
+    }
+}
+
+.header--hidden {
+    transform: translateY(-100%);
 }
 
 main {
@@ -61,7 +85,7 @@ main {
             gap: var(--size-xl);
             align-items: flex-start;
             list-style-type: none;
-            
+
             .menu-button-li {
                 width: 100%;
                 display: flex;
@@ -164,7 +188,7 @@ main {
         font-weight: var(--font-weight-bold);
         font-size: var(--size-chapter);
         color: var(--color-chapter-number);
-        text-box-trim: trim-both;
+        text-box-trim: trim-end;
         text-box-edge: cap alphabetic !important;
         padding-bottom: var(--size-s);
     }
@@ -177,5 +201,107 @@ main {
         font-weight: var(--font-weight-slim);
         letter-spacing: 10%;
         line-height: 170%;
+    }
+}
+
+.project-container {
+    padding-top: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 100px;
+
+    .projects-intro {
+        width: 60%;
+        font-size: var(--size-m);
+        color: var(--color-primary);
+        font-weight: var(--font-weight-slim);
+        letter-spacing: 10%;
+        line-height: 170%;
+    }
+
+    .project-card {
+        width: 80%;
+
+        .img-container {
+            width: 100%;
+            height: 30vh;
+            overflow: hidden;
+            padding-bottom: var(--size-m);
+            transition: height 0.3s ease-in-out;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.3s ease-in-out;
+                filter: grayscale(100%);
+                transition:
+                    transform 0.3s ease-in-out,
+                    filter 0.3s ease-in-out;
+            }
+
+            &:hover img {
+                transform: scale(1.03);
+                filter: grayscale(0%);
+                transition:
+                    transform 0.3s ease-in-out,
+                    filter 0.3s ease-in-out;
+            }
+
+            &:hover {
+                height: 80vh;
+                transition: height 0.3s ease-in-out;
+            }
+        }
+
+        .project-info {
+            display: flex;
+            background-color: var(--color-bg);
+            color: var(--color-primary);
+            gap: 100px;
+
+            .project-text {
+                .project-title {
+                    font-size: var(--size-m);
+                    text-transform: uppercase;
+                    margin: 0;
+                    padding-bottom: var(--size-s);
+                }
+
+                .project-description {
+                    font-size: var(--size-s);
+                    margin: 0;
+                    line-height: 170%;
+                }
+            }
+
+            .project-links {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: flex-end;
+                gap: var(--size-s);
+                width: 50%;
+
+                a {
+                    text-decoration: none;
+                    color: var(--color-bg);
+                    background-color: var(--color-primary);
+                    font-size: var(--size-xs);
+                    border: 1px solid transparent;
+                    padding: var(--size-xs) var(--size-s);
+                    transition: 0.3s ease-in-out;
+
+                    &:hover {
+                        border: 1px solid var(--color-primary);
+                        background-color: var(--color-bg);
+                        color: var(--color-primary);
+                    }
+                }
+            }
+        }
     }
 }
