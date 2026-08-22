@@ -38,15 +38,20 @@
             }
         },
         {
-            "title": "aurora - Bachelor Thesis",
-            "description": "Comparison between server deployment and serverless Computing via receiving and tracking flight data.",
+            "title": "aurora - Bachelor Arbeit",
+            "description": "Vergleich einer serverbasierten und einer serverlosen Architektur für eine Webanwendung. Zur Erhebung wurden Flugdaten in Echtzeit abgerufen und in einer Webanwendung visualisiert.",
             "year": "2025/26",
             "image": "./img/bachelor.png",
             "technologies": [
                 "JavaScript",
+                "Node.js",
                 "AWS Lambda",
                 "AWS API Gateway",
-                "DynamoDB"
+                "DynamoDB",
+                "Terraform",
+                "Docker",
+                "Leaflet",
+                "EC2"
             ],
             "links": {
                 "repo": "https://github.com/yelfrayg/bachelor-el-fraygui-25-26",

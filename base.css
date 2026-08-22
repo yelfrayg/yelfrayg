@@ -47,6 +47,7 @@ header {
     width: 100%;
     backdrop-filter: blur(10px);
     padding-top: var(--size-m);
+    padding-bottom: var(--size-m);
     padding-left: calc(3 * var(--size-xl));
     padding-right: calc(3 * var(--size-xl));
     color: var(--color-heading);
@@ -252,7 +253,7 @@ main {
             }
 
             &:hover {
-                height: 80vh;
+                height: 40vh;
                 transition: height 0.3s ease-in-out;
             }
         }
