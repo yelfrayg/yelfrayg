@@ -2,7 +2,7 @@
     "projects": [
         {
             "title": "OmniMize",
-            "description": "Web application that optimizes photos in terms of size for web use.",
+            "description": "Web Anwendung, die Fotos hinsichtlich ihrer Größe für den Web-Einsatz optimiert.",
             "year": 2024,
             "image": "./img/omnimize.png",
             "technologies": [
@@ -19,7 +19,7 @@
         },
         {
             "title": "SETTLE",
-            "description": "Web application for translating and explaining legal documents into different languages using AI.",
+            "description": "Web Anwendung zum Erklären und Übersetzen von behördlichen Dokumenten in verschiedene Sprachen unter Verwendung von KI und DeepL.",
             "year": 2025,
             "image": "./img/photo-log-yassin-el-fraygui-2025-10-16-08.png",
             "technologies": [
@@ -33,12 +33,11 @@
                 "Docker"
             ],
             "links": {
-                "repo": "https://github.com/yelfrayg/praxisprojekt-ss-2025",
-                "website": "https://yasabi04.github.io/praxisprojekt-ss-2025/Prototyp/frontend/html/"
+                "repo": "https://github.com/yelfrayg/praxisprojekt-ss-2025"
             }
         },
         {
-            "title": "aurora - Bachelor Arbeit",
+            "title": "aurora - Bachelorarbeit",
             "description": "Vergleich einer serverbasierten und einer serverlosen Architektur für eine Webanwendung. Zur Erhebung wurden Flugdaten in Echtzeit abgerufen und in einer Webanwendung visualisiert.",
             "year": "2025/26",
             "image": "./img/bachelor.png",

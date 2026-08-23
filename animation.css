@@ -8,3 +8,73 @@
     visibility: hidden;
   }
 }
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  h3 {
+    width: 100%;
+    text-align: center; 
+    margin-top: var(--size-small-heading);
+    padding-left: 10vw;
+    padding-right: 10vw;
+    font-size: 150px;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    color: var(--color-chapter-number);
+    z-index: 0;
+  }
+}
+
+.skills-banner {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  overflow: hidden;
+  padding: 2rem 0;
+}
+
+.skills-row {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.row-1 { margin-left: 0; }
+.row-2 { margin-left: -50px; }  /* horizontaler Versatz = "versetzt übereinander" */
+
+.skills-track {
+  display: inline-flex;
+  gap: 0;
+  animation: scroll-left 15s linear infinite;
+
+  span {
+    color: var(--color-heading);
+
+    &:hover {
+      color: var(--color-primary);
+    }
+  }
+}
+
+.skills-track.quick {
+  animation: scroll-left 25s linear infinite;
+}
+
+.skills-track span {
+  font-size: 1.5rem;
+  font-weight: 600;
+  white-space: nowrap;
+  margin-right: 5rem;
+}
+
+@keyframes scroll-left {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@keyframes scroll-right {
+  from { transform: translateX(-50%); }
+  to   { transform: translateX(0); }
+}

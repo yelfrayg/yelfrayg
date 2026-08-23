@@ -2,7 +2,7 @@
     --color-heading: #000000;
     --color-bg: #ffffff;
     --color-primary: #414141;
-    --color-secondary: #8b44444b;
+    --color-secondary: #838383;
     --color-chapter-number: #c9c9c956;
 
     --font-weight-slim: 400;
@@ -14,6 +14,8 @@
     --size-m: 24px;
     --size-l: 32px;
     --size-xl: 36px;
+
+    --size-small-heading: 100px;
 
     --size-heading: 100px;
     --size-chapter: 800px;
@@ -141,36 +143,16 @@ main {
     width: 100%;
 }
 
-.row.align-left {
-    justify-content: flex-start;
-}
 
-.row.align-right {
-    width: 80%;
-    justify-content: flex-end;
-}
 
 .row {
     .content-box,
     .intro,
     .connect {
-        width: 60%;
+        width: 50%;
     }
 }
 
-.content-box {
-    width: 60%;
-    padding: var(--size-xl);
-}
-
-.align-left {
-    justify-content: flex-start;
-}
-
-.align-right {
-    justify-content: flex-end;
-    width: 60%;
-}
 
 .content-box {
     position: relative;
@@ -196,13 +178,30 @@ main {
 }
 
 .intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
     .intro-text {
         font-size: var(--size-m);
         color: var(--color-primary);
         font-weight: var(--font-weight-slim);
         letter-spacing: 10%;
         line-height: 170%;
+
+        .highlight-word {
+            font-weight: var(--font-weight-bold);
+        }
     }
+}
+
+.project-section-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .project-container {
@@ -270,6 +269,11 @@ main {
                     text-transform: uppercase;
                     margin: 0;
                     padding-bottom: var(--size-s);
+
+                    .project-year {
+                        font-size: var(--size-s);
+                        color: var(--color-secondary);
+                    }
                 }
 
                 .project-description {

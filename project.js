@@ -6,16 +6,17 @@ document.addEventListener("DOMContentLoaded", async function () {
         res.projects.forEach((project) => {
             const projectCard = document.createElement("div");
             projectCard.classList.add("project-card");
+            projectCard.id = `project-${res.projects.indexOf(project)}`;
             projectCard.innerHTML = `
                         <div class="img-container">
                             <img
                                 src="${project.image}"
-                                alt="${project.title} Image"
+                                alt="${project.title}"
                             />
                         </div>
                         <div class="project-info">
                             <div class="project-text">
-                                <h3 class="project-title">${project.title}</h3>
+                                <h3 class="project-title">${project.title} <span class = "project-year">// ${project.year}</span></h3>
                                 <p class="project-description">
                                     ${project.description}
                                 </p>
