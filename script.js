@@ -15,8 +15,11 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    toggleMenu();
 });
+
+document.addEventListener("projectsLoaded", () => {
+    pressdfButton();
+})
 
 // Wenn nach unten gescrollt wird soll der Header verschwinden und beim nach oben scrollen wieder erscheinen
 
@@ -79,18 +82,28 @@ function updateCursor(color) {
     document.body.style.cursor = cursorUrl;
 }
 
-function toggleMenu() {
-    const menu = document.querySelector("aside");
-    const menuButton = document.querySelector(".menu-button");
+// function toggleMenu() {
+//     const menu = document.querySelector("aside");
+//     const menuButton = document.querySelector(".menu-button");
 
-    menuButton.addEventListener("click", () => {
-        const isOpen = menu.classList.toggle("open");
+//     menuButton.addEventListener("click", () => {
+//         const isOpen = menu.classList.toggle("open");
 
-        if (isOpen) {
-            menu.style.bottom = "30%";
-        } else {
-            const hiddenOffset = Math.ceil(menu.offsetHeight / 5) * 4;
-            menu.style.bottom = `-${hiddenOffset}px`;
-        }
-    });
+//         if (isOpen) {
+//             menu.style.bottom = "30%";
+//         } else {
+//             const hiddenOffset = Math.ceil(menu.offsetHeight / 5) * 4;
+//             menu.style.bottom = `-${hiddenOffset}px`;
+//         }
+//     });
+// }
+
+function pressdfButton() {
+    const dfBtn = document.querySelector(".df-btn");
+    const dfProject = document.getElementById("project-3");
+    dfBtn.addEventListener("click", () => {
+        const offset = 40;
+        const topPosition = dfProject.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top: topPosition, behavior: "smooth" });
+    })
 }
