@@ -10,6 +10,7 @@
 }
 
 .skills {
+  background-color: var(--color-primary);
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -46,7 +47,7 @@
 }
 
 .skills-track.quick {
-  animation: scroll-left 25s linear infinite;
+  animation: scroll-left 15s linear infinite;
 }
 
 .skills-track span {
