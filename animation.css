@@ -10,7 +10,6 @@
 }
 
 .skills {
-  background-color: var(--color-primary);
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -65,4 +64,25 @@
 @keyframes scroll-right {
   from { transform: translateX(-50%); }
   to   { transform: translateX(0); }
+}
+
+@keyframes slide-in {
+  from { 
+    transform: translateX(80%);
+    opacity: 0;
+  }
+  to   { 
+    transform: translateX(0); 
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes expandX {
+  0% { width: 30%; opacity: 0; }
+  100% { width: 100%; opacity: 1; }
 }

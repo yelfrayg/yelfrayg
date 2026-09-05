@@ -103,23 +103,39 @@
                     <section class="intro">
                         <div class="welcome-grid">
                             <div class="img-wrapper">
-                                <img src="./img/personal-foto.png" alt="Yassin El Fraygui"/>
+                                <img
+                                    src="./img/personal-foto.png"
+                                    alt="Yassin El Fraygui"
+                                />
                             </div>
                             <div class="welcome-text">
-                                <h2>Hi there!</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <h2 class="welcome-text-heading">Hi there, I'm Yassin!</h2>
+                                <p class="welcome-text-paragraph">
+                                    ... a web developer from Cologne,
+                                    Germany. 
+                                    <br>
+                                    I love to create functional and
+                                    robust web applications and backend systems.
+                                    My solutions may not be the most beautiful,
+                                    but they are always easy to understand and
+                                    maintain. 
+                                </p>
                             </div>
                             <div class="welcome-key-value">
                                 <ul class="key-list">
-                                    <li class="key">AGE</li>
-                                    <li class="key">LOCATION</li>
-                                    <li class="key">CURRENTLY</li>
+                                    <li class="key" data-key="AGE">AGE</li>
+                                    <li class="key" data-key="LOCATION">LOCATION</li>
+                                    <li class="key" data-key="CURRENTLY">CURRENTLY</li>
                                 </ul>
                                 <ul class="value-list">
-                                    <li class="value">22</li>
-                                    <li class="value">Cologne, Germany</li>
-                                    <li class="value">Studying media informatics</li>
+                                    <li class="value" data-key="AGE">22</li>
+                                    <li class="value" data-key="LOCATION">Cologne, Germany</li>
+                                    <li class="value" data-key="CURRENTLY">
+                                        Studying media informatics
+                                    </li>
                                 </ul>
+                                <div class="corner-left-top"></div>
+                                <div class="corner-right-bottom"></div>
                             </div>
                         </div>
                     </section>
@@ -134,7 +150,10 @@
 
                 <div class="row align-right content-02">
                     <div class="img-wrapper">
-                        <img src="./img/stairway-to-heaven.png" alt="Stairway to Heaven" />
+                        <img
+                            src="./img/stairway-to-heaven.png"
+                            alt="Stairway to Heaven"
+                        />
                     </div>
                     <section class="intro">
                         <p class="intro-text">
@@ -149,10 +168,13 @@
                 <div class="row align-middle">
                     <section class="transition-phrase">
                         <p class="transition-text">
-                            Right now I'm working on an <button class = "df-btn">online shop</button> for a family
-                            business, which is a great opportunity for me to master TypeScript and learn more
-                            about
-                            <span class="highlight-word">how the web works...</span>
+                            Right now I'm working on an
+                            <button class="df-btn">online shop</button> for a
+                            family business, which is a great opportunity for me
+                            to master TypeScript and learn more about
+                            <span class="highlight-word"
+                                >how the web works...</span
+                            >
                         </p>
                     </section>
                 </div>
@@ -190,7 +212,7 @@
                     </div> -->
                     </section>
                     <div class="skills">
-                        <h3 class ="subheading-h3">My Tech Stack</h3>
+                        <h3 class="subheading-h3">My Tech Stack</h3>
                         <div class="skills-banner">
                             <div class="skills-row row-1">
                                 <div class="skills-track">
@@ -210,7 +232,7 @@
                                     ><span>GitHub</span>
                                 </div>
                             </div>
-<!-- Hallo Test -->
+                            <!-- Hallo Test -->
                             <div class="skills-row row-2">
                                 <div class="skills-track quick">
                                     <span>Docker</span>
@@ -298,5 +320,6 @@
         </main>
         <script src="./script.js"></script>
         <script src="./project.js"></script>
+        <script src="./animations.js"></script>
     </body>
 </html>
