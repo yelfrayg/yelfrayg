@@ -1,88 +1,110 @@
 @keyframes drop-down {
-  0% {
-    bottom: 0;
-    visibility: visible;
-  }
-  100% {
-    bottom: -50vh;
-    visibility: hidden;
-  }
+    0% {
+        bottom: 0;
+        visibility: visible;
+    }
+    100% {
+        bottom: -50vh;
+        visibility: hidden;
+    }
 }
 
 .skills {
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
 }
 
 .skills-banner {
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-  overflow: hidden;
-  padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    overflow: hidden;
+    padding: 2rem 0;
 }
 
 .skills-row {
-  overflow: hidden;
-  white-space: nowrap;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
-.row-1 { margin-left: 0; }
-.row-2 { margin-left: -50px; }  /* horizontaler Versatz = "versetzt übereinander" */
+.row-1 {
+    margin-left: 0;
+}
+.row-2 {
+    margin-left: -50px;
+} /* horizontaler Versatz = "versetzt übereinander" */
 
 .skills-track {
-  display: inline-flex;
-  gap: 0;
-  animation: scroll-left 15s linear infinite;
+    display: inline-flex;
+    gap: 0;
+    animation: scroll-left 15s linear infinite;
 
-  span {
-    color: var(--color-heading);
+    span {
+        color: var(--color-heading);
 
-    &:hover {
-      color: var(--color-primary);
+        &:hover {
+            color: var(--color-primary);
+        }
     }
-  }
 }
 
 .skills-track.quick {
-  animation: scroll-left 15s linear infinite;
+    animation: scroll-left 15s linear infinite;
 }
 
 .skills-track span {
-  font-size: 1.5rem;
-  font-weight: 600;
-  white-space: nowrap;
-  margin-right: 5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    white-space: nowrap;
+    margin-right: 5rem;
 }
 
 @keyframes scroll-left {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
 }
 
 @keyframes scroll-right {
-  from { transform: translateX(-50%); }
-  to   { transform: translateX(0); }
+    from {
+        transform: translateX(-50%);
+    }
+    to {
+        transform: translateX(0);
+    }
 }
 
 @keyframes slide-in {
-  from { 
-    transform: translateX(80%);
-    opacity: 0;
-  }
-  to   { 
-    transform: translateX(0); 
-    opacity: 1;
-  }
+    from {
+        transform: translateX(80%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 @keyframes fade-in {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes expandX {
-  0% { width: 30%; opacity: 0; }
-  100% { width: 100%; opacity: 1; }
+    0% {
+        width: 50%;
+        opacity: 0;
+    }
+    100% {
+        width: 100%;
+        opacity: 1;
+    }
 }
