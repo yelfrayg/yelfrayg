@@ -1,108 +1,109 @@
-document.addEventListener('DOMContentLoaded', () => {
-    updateDateTime();
-    
-    setInterval(updateDateTime, 100000);
-    
-    function updateDateTime() {
-        const now = new Date();
-        const day = now.getDay();
-        const date = now.getDate();
-        const month = now.getMonth();
-        const year = now.getFullYear().toString().slice(-2);
-        const time = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+document.addEventListener("DOMContentLoaded", () => {
+    const lightSwitch = document.querySelector(".light-switch");
 
-        let dayName;
-        switch (day) {
-            case 0: dayName = 'SUNDAY'; break;
-            case 1: dayName = 'MONDAY'; break;
-            case 2: dayName = 'TUESDAY'; break;
-            case 3: dayName = 'WEDNESDAY'; break;
-            case 4: dayName = 'THURSDAY'; break;
-            case 5: dayName = 'FRIDAY'; break;
-            case 6: dayName = 'SATURDAY'; break;
+    updateCursor("#000000");
+
+    lightSwitch.addEventListener("click", (_) => {
+        if (lightSwitch.classList.contains("night")) {
+            lightSwitch.classList.remove("night");
+            lightSwitch.classList.add("day");
+            switchMode("light");
+        } else if (lightSwitch.classList.contains("day")) {
+            lightSwitch.classList.remove("day");
+            lightSwitch.classList.add("night");
+            switchMode("dark");
         }
+    });
 
-        const monthNumber = (month + 1).toString().padStart(2, '0');
-
-        document.querySelector('.data-day').innerHTML = dayName;
-        document.querySelector('.data-date').innerHTML = `${date} / ${monthNumber} / ${year}`;
-        document.querySelector('.data-time').innerHTML = time;
-        
-        const greeting = document.querySelector('.intro-heading');
-        const hour = now.getHours();
-        
-        // Theme basierend auf Uhrzeit wechseln
-        switchMode(hour);
-
-        // Using hour number is more reliable than comparing time strings
-        if (hour >= 6 && hour < 12) {
-            greeting.innerHTML = 'Good Morning!';
-        } else if (hour >= 12 && hour < 18) {
-            greeting.innerHTML = 'Good Afternoon!';
-        } else if (hour >= 18 && hour < 24) {
-            greeting.innerHTML = 'Good Evening!';
-        } else {
-            greeting.innerHTML = 'Good Night!';
-        }
-    }
-
-    const advisorButton = document.querySelector('.advisor-button');
-
-    if(advisorButton){
-        const advisor = document.querySelector('.advisor-banner');
-        if(localStorage.getItem('advisorDismissed') === 'true'){
-            advisor.style.display = 'none';
-        }
-        else {
-            advisorButton.addEventListener('click', () => {
-                localStorage.setItem('advisorDismissed', 'true');
-                advisor.style.animation = 'drop-down 2s forwards';
-
-                advisor.addEventListener('animationend', () => {
-                    advisor.style.display = 'none';
-                }, { once: true })
-            })
-        }
-    }
 });
 
-function switchMode(hour) {
+document.addEventListener("projectsLoaded", () => {
+    pressdfButton();
+})
 
+// Wenn nach unten gescrollt wird soll der Header verschwinden und beim nach oben scrollen wieder erscheinen
+
+let lastScrollY = window.scrollY;
+const header = document.getElementById('header');
+
+window.addEventListener('scroll', () => {
+  const currentScrollY = window.scrollY;
+
+  // Verhindert negatives Scrollen (z. B. Elastic Scrolling auf iOS)
+  if (currentScrollY < 0) return;
+
+  // Nach unten scrollen -> Verstecken | Nach oben scrollen -> Zeigen
+  if (currentScrollY > lastScrollY && currentScrollY > 80) {
+    header.classList.add('header--hidden');
+  } else {
+    header.classList.remove('header--hidden');
+  }
+
+  lastScrollY = currentScrollY;
+});
+
+function switchMode(color) {
     const themes = {
         default: {
-            '--background-color': '#E5E0CE',
-            '--text-color': '#D38D51',
-            '--chapter-color': '#ded2ba',
-            '--menu-entry-color': '#dcb78f'
+            "--color-heading": "#000000",
+            "--color-bg": "#ffffff",
+            "--color-primary": "#414141",
+            "--color-secondary": "#8b44444b",
         },
         night: {
-            '--background-color': '#394770',
-            '--text-color': '#808CB1',
-            '--chapter-color': '#5f6a8b',
-            '--menu-entry-color': '#9ca3b7'
-        }
+           "--color-heading": "#ffffff",
+            "--color-bg": "#080808",
+            "--color-primary": "#DADADA",
+            "--color-secondary": "#d4d4d424",
+        },
     };
-    
+
     let selectedTheme;
-    
-    if (hour >= 18 || hour < 6) {
-        selectedTheme = themes.night;
-        const entries = document.querySelectorAll('.menu-entry a')
-        entries.forEach(entry => {
-            entry.addEventListener('mouseenter', () => {
-                entry.style.color = 'white';
-            });
-            entry.addEventListener('mouseleave', () => {
-                entry.style.color = '';
-            });
-        });
-    } else {
+
+    if (color == "light") {
         selectedTheme = themes.default;
+    } else {
+        selectedTheme = themes.night;
     }
-    
+
     // Theme anwenden
     const root = document.documentElement;
     Object.entries(selectedTheme).forEach(([property, value]) => {
         root.style.setProperty(property, value);
     });
+
+    updateCursor(selectedTheme["--color-heading"]);
+}
+
+function updateCursor(color) {
+    const cursorSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 8 8"><circle cx="4" cy="4" r="2" fill="${color}"/></svg>`;
+    const cursorUrl = `url("data:image/svg+xml,${encodeURIComponent(cursorSvg)}") 4 4, auto`;
+
+    document.body.style.cursor = cursorUrl;
+}
+
+// function toggleMenu() {
+//     const menu = document.querySelector("aside");
+//     const menuButton = document.querySelector(".menu-button");
+
+//     menuButton.addEventListener("click", () => {
+//         const isOpen = menu.classList.toggle("open");
+
+//         if (isOpen) {
+//             menu.style.bottom = "30%";
+//         } else {
+//             const hiddenOffset = Math.ceil(menu.offsetHeight / 5) * 4;
+//             menu.style.bottom = `-${hiddenOffset}px`;
+//         }
+//     });
+// }
+
+function pressdfButton() {
+    const dfBtn = document.querySelector(".df-btn");
+    const dfProject = document.getElementById("project-3");
+    dfBtn.addEventListener("click", () => {
+        const offset = 40;
+        const topPosition = dfProject.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top: topPosition, behavior: "smooth" });
+    })
 }

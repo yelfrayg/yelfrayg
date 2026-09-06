@@ -1,8 +1,10 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Portfolio von Yassin El Fraygui." />
+        <meta name="author" content="Yassin El Fraygui" />
         <link
             href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;700&display=swap"
             rel="stylesheet"
@@ -13,138 +15,317 @@
         />
         <link rel="stylesheet" href="./base.css" />
         <link rel="stylesheet" href="./animation.css" />
+        <link rel="stylesheet" href="./01.css" />
         <link rel="icon" type="image/x-icon" href="./img/favicon-merge.jpg" />
         <title>Portfolio</title>
     </head>
     <body>
-        <header>
+        <header id="header">
             <h1 class="logo">yelfrayg.</h1>
-            <ul class="data-group">
-                <li class="data-day"></li>
-                <li class="data-date"></li>
-                <li class="data-time"></li>
-            </ul>
+            <div class="light-switch day">
+                <svg
+                    width="32"
+                    height="44"
+                    viewBox="0 0 32 44"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <rect
+                        x="18.5"
+                        y="0.5"
+                        width="1"
+                        height="19"
+                        stroke="currentColor"
+                    />
+                    <path
+                        d="M18.4736 1.35449L1.17578 24.1152L1.16992 24.1045L18.2988 1.26758L18.4736 1.35449Z"
+                        fill="#00AEFF"
+                        stroke="currentColor"
+                        stroke-width="2"
+                    />
+                    <path
+                        d="M30.8291 19.8945L13.7012 42.7324L13.5254 42.6445L30.8232 19.8838L30.8291 19.8945Z"
+                        fill="#00AEFF"
+                        stroke="currentColor"
+                        stroke-width="2"
+                    />
+                    <rect
+                        x="13.5"
+                        y="43.5"
+                        width="1"
+                        height="19"
+                        transform="rotate(-180 13.5 43.5)"
+                        fill="#00AEFF"
+                        stroke="currentColor"
+                    />
+                    <rect
+                        x="31.5"
+                        y="18.5"
+                        width="1"
+                        height="13"
+                        transform="rotate(90 31.5 18.5)"
+                        fill="#00AEFF"
+                        stroke="currentColor"
+                    />
+                    <rect
+                        x="0.5"
+                        y="25.5"
+                        width="1"
+                        height="13"
+                        transform="rotate(-90 0.5 25.5)"
+                        fill="#00AEFF"
+                        stroke="currentColor"
+                    />
+                </svg>
+            </div>
         </header>
         <main>
-            <aside>
+            <!-- <aside>
                 <ul class="menu">
+                    <li class="menu-button-li">
+                        <button class="menu-button">X</button>
+                    </li>
                     <li class="menu-entry"><a href="#01">Home</a></li>
                     <li class="menu-entry"><a href="#02">About me</a></li>
                     <li class="menu-entry"><a href="#03">Projects</a></li>
                     <li class="menu-entry"><a href="#04">Contact me!</a></li>
                 </ul>
-            </aside>
+            </aside> -->
 
-            <h2 class="chapter" id="01">01</h2>
-            <section class="intro">
-                <h3 class="intro-heading">Hi!</h3>
-                <p class="intro-text fade-in-section">
-                    my name is Yassin. I'm a 21 year-old german, who is
-                    currently studying
-                    <a
-                        href="https://www.medieninformatik.th-koeln.de/"
-                        class="link"
-                        >media informatics</a
-                    >
-                    at TH Cologne.
-                </p>
-                <!-- <p class="intro-text">
-                <span class="fade-in">I try to </span>
-                <span class="highlight-word">solve problems</span>
-                <span class="fade-in"> people actually have - not ones dreamt up in an eco-allotment coffee shop.</span>
-            </p> -->
-                <p class="intro-text">
-                    I build things that
-                    <span class="highlight-word">work</span>. Shocking Concept,
-                    I know.
-                </p>
-                <p class="intro-text">
-                    Currently focussing on
-                    <span class="highlight-word">WebDev</span> and
-                    <span class="highlight-word">social projects!</span>
-                </p>
-            </section>
+            <div class="container">
+                <div class="row align-left">
+                    <div class="content-box">
+                        <span class="number" id="01">01</span>
+                        <h2>INTRO</h2>
+                    </div>
+                </div>
 
-            <h2 class="chapter" id="02">02</h2>
-            <section class="intro">
-                <h3 class="intro-heading">About me</h3>
-                <p class="intro-text fade-in-section">
-                    I am a <span class="highlight-word">developer</span> with a
-                    focus on creating innovative solutions that
-                    <span class="highlight-word">make a difference</span>.
-                </p>
-                <p class="intro-text">
-                    After graduating from school in 2022, I immediately started
-                    studying at
-                    <a href="https://www.th-koeln.de/" class="link"
-                        >TH Cologne</a
-                    >. Within the past three years, I encountered many ...
-                </p>
-            </section>
+                <div class="row">
+                    <section class="intro">
+                        <div class="welcome-grid">
+                            <div class="img-wrapper">
+                                <img
+                                    src="./img/personal-foto.png"
+                                    alt="Yassin El Fraygui"
+                                />
+                            </div>
+                            <div class="welcome-text">
+                                <h2 class="welcome-text-heading">
+                                    Hi there, I'm Yassin!
+                                </h2>
+                                <p class="welcome-text-paragraph">
+                                    ... a web developer from Cologne, Germany.
+                                    <br />
+                                    I love to create functional and robust web
+                                    applications and backend systems. In my opinion, the
+                                    most important thting about a system is, that
+                                    it works and is easy to use.
+                                </p>
+                            </div>
+                            <div class="welcome-key-value">
+                                <ul class="key-list">
+                                    <li class="key" data-key="AGE">AGE</li>
+                                    <li class="key" data-key="LOCATION">
+                                        LOCATION
+                                    </li>
+                                    <li class="key" data-key="CURRENTLY">
+                                        CURRENTLY
+                                    </li>
+                                </ul>
+                                <ul class="value-list">
+                                    <li class="value" data-key="AGE">22</li>
+                                    <li class="value" data-key="LOCATION">
+                                        Cologne, Germany
+                                    </li>
+                                    <li class="value" data-key="CURRENTLY">
+                                        Studying media informatics
+                                    </li>
+                                </ul>
+                                <div class="corner-left-top"></div>
+                                <div class="corner-right-bottom"></div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
 
-            <h2 class="chapter" id="03">03</h2>
-            <section class="intro-about">
-                <h3 class="intro-heading">My latest projects</h3>
-                <p class="intro-text">
-                    By clicking on each card, you will be redirected to the
-                    repository on <span class="highlight-word">GitHub</span>.
-                </p>
-                <div class="project-container"></div>
-            </section>
+                <div class="row align-left">
+                    <div class="content-box">
+                        <span class="number" id="02">02</span>
+                        <h2>ABOUT ME</h2>
+                    </div>
+                </div>
 
-            <h2 class="chapter" id="04">04</h2>
-            <section class="connect">
-                <h4 class="connect-slogan">
-                    Ready to start something
-                    <span class="highlight-word">Great?</span>Let's connect!
-                </h4>
-                <form
-                    action="https://formsubmit.co/deine-email@domain.com"
-                    method="POST"
-                    class="contact-form"
-                >
-                    <input
-                        type="text"
-                        name="name"
-                        required
-                        class="form-name"
-                        placeholder="Name"
-                    />
-                    <input
-                        type="email"
-                        name="email"
-                        required
-                        class="form-email"
-                        placeholder="Email"
-                    />
-                    <input
-                        type="text"
-                        name="company"
-                        class="form-company"
-                        placeholder="Company"
-                    />
-                    <textarea
-                        name="message"
-                        required
-                        class="form-message"
-                        placeholder="Your message"
-                    ></textarea>
-                    <button type="submit" class="form-submit">
-                        Send Message
-                    </button>
-                </form>
-            </section>
-            <div class="advisor-banner">
-                <h4 class="advisor-heading">Note</h4>
-                <p class="advisor-text">
-                    For better accessibility and readability at night, I decided
-                    to provide this website with an automatic color switch.
-                </p>
-                <button class="advisor-button">X</button>
+                <div class="row align-right content-02">
+                    <div class="img-wrapper">
+                        <img
+                            src="./img/stairway-to-heaven.png"
+                            alt="Stairway to Heaven"
+                        />
+                    </div>
+                    <section class="intro">
+                        <p class="intro-text">
+                            Besides programming I enjoy reading and the music of
+                            the 70's and 80's. In my opinion the best song is
+                            Stairway to Heaven by Led Zeppelin.
+                            <br />
+                        </p>
+                    </section>
+                </div>
+
+                <div class="row align-middle">
+                    <section class="transition-phrase">
+                        <p class="transition-text">
+                            Right now I'm working on an
+                            <button class="df-btn">online shop</button> for a
+                            family business, which is a great opportunity for me
+                            to master TypeScript and learn more about
+                            <span class="highlight-word"
+                                >how the web works...</span
+                            >
+                        </p>
+                    </section>
+                </div>
+
+                <div class="row align-left">
+                    <div class="content-box">
+                        <span class="number" id="03">03</span>
+                        <h2>MY WORK</h2>
+                    </div>
+                </div>
+                <div class="project-container-wrapper">
+                    <section class="project-container">
+                        <!-- <div class="project-card">
+                        <div class="img-container">
+                            <img
+                                src="./img/photo-log-yassin-el-fraygui-2025-10-16-08.png"
+                                alt="Project Image"
+                            />
+                        </div>
+                        <div class="project-info">
+                            <div class="project-text">
+                                <h3 class="project-title">Test</h3>
+                                <p class="project-description">
+                                    Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit. Donec vel sapien eget nunc
+                                    efficitur tincidunt. Lorem ipsum dolor sit
+                                    amet, consectetur adipiscing elit.
+                                </p>
+                            </div>
+                            <div class="project-links">
+                                <a href="#">Zum Repo!</a>
+                                <a href="#">Zur Website!</a>
+                            </div>
+                        </div>
+                    </div> -->
+                    </section>
+                    <div class="skills">
+                        <h3 class="subheading-h3">My Tech Stack</h3>
+                        <div class="skills-banner">
+                            <div class="skills-row row-1">
+                                <div class="skills-track">
+                                    <span>HTML</span>
+                                    <span>CSS</span>
+                                    <span>JavaScript</span>
+                                    <span>Node.js</span>
+                                    <span>TypeScript</span>
+                                    <span>PostgreSQL</span>
+                                    <span>Git</span>
+                                    <span>GitHub</span>
+                                    <!-- Liste komplett wiederholen, damit der Loop nahtlos ist -->
+                                    <span>HTML</span><span>CSS</span
+                                    ><span>JavaScript</span> <span>Node.js</span
+                                    ><span>TypeScript</span
+                                    ><span>PostgreSQL</span><span>Git</span
+                                    ><span>GitHub</span>
+                                </div>
+                            </div>
+                            <!-- Hallo Test -->
+                            <div class="skills-row row-2">
+                                <div class="skills-track quick">
+                                    <span>Docker</span>
+                                    <span>AWS</span>
+                                    <span>Serverless Computing</span>
+                                    <span>REST APIs</span>
+                                    <span>Prisma ORM</span>
+                                    <span>Redis</span>
+                                    <span>pgAdmin</span>
+                                    <span>Figma</span>
+                                    <span>AWS</span>
+                                    <span>Ubuntu</span>
+                                    <span>Linux</span>
+                                    <span>Express.js</span>
+                                    <span>Terraform</span>
+                                    <!-- Liste komplett wiederholen, damit der Loop nahtlos ist -->
+                                    <span>Docker</span>
+                                    <span>AWS</span>
+                                    <span>Serverless Computing</span>
+                                    <span>REST APIs</span>
+                                    <span>Prisma ORM</span>
+                                    <span>Redis</span>
+                                    <span>pgAdmin</span>
+                                    <span>Figma</span>
+                                    <span>AWS</span>
+                                    <span>Ubuntu</span>
+                                    <span>Linux</span>
+                                    <span>Express.js</span>
+                                    <span>Terraform</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <article class="connect-container">
+                    <div class="row align-left">
+                        <div class="content-box">
+                            <span class="number" id="04">04</span>
+                            <h2>CONTACT</h2>
+                        </div>
+                    </div>
+
+                    <div class="row align-right">
+                        <section class="connect">
+                            <form
+                                action="https://formsubmit.co/deine-email@domain.com"
+                                method="POST"
+                                class="contact-form"
+                            >
+                                <input
+                                    type="text"
+                                    name="name"
+                                    required
+                                    class="form-name"
+                                    placeholder="Name"
+                                />
+                                <input
+                                    type="email"
+                                    name="email"
+                                    required
+                                    class="form-email"
+                                    placeholder="Email"
+                                />
+                                <input
+                                    type="text"
+                                    name="company"
+                                    class="form-company"
+                                    placeholder="Company"
+                                />
+                                <textarea
+                                    name="message"
+                                    required
+                                    class="form-message"
+                                    placeholder="Your message"
+                                ></textarea>
+                                <button type="submit" class="form-submit">
+                                    Send Message
+                                </button>
+                            </form>
+                        </section>
+                    </div>
+                </article>
             </div>
         </main>
-        <footer></footer>
         <script src="./script.js"></script>
-        <script src="./fetch.js"></script>
+        <script src="./project.js"></script>
+        <script src="./animations.js"></script>
     </body>
 </html>
