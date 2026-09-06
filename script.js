@@ -1,14 +1,27 @@
 document.addEventListener("DOMContentLoaded", () => {
     const lightSwitch = document.querySelector(".light-switch");
 
-    updateCursor("#000000");
+    // Überprüfe, ob ein Theme im Local Storage gespeichert ist
+    const savedTheme = localStorage.getItem("theme");
+    console.log("Saved theme:", savedTheme);
+    if (savedTheme === "dark") {
+        lightSwitch.classList.add("night");
+        switchMode("dark");
+    } else {
+        lightSwitch.classList.add("day");
+        updateCursor("#000000");
+        switchMode("light");
+    }
+
 
     lightSwitch.addEventListener("click", (_) => {
         if (lightSwitch.classList.contains("night")) {
+            localStorage.setItem("theme", "light");
             lightSwitch.classList.remove("night");
             lightSwitch.classList.add("day");
             switchMode("light");
         } else if (lightSwitch.classList.contains("day")) {
+            localStorage.setItem("theme", "dark");
             lightSwitch.classList.remove("day");
             lightSwitch.classList.add("night");
             switchMode("dark");
@@ -27,19 +40,19 @@ let lastScrollY = window.scrollY;
 const header = document.getElementById('header');
 
 window.addEventListener('scroll', () => {
-  const currentScrollY = window.scrollY;
+    const currentScrollY = window.scrollY;
 
-  // Verhindert negatives Scrollen (z. B. Elastic Scrolling auf iOS)
-  if (currentScrollY < 0) return;
+    // Verhindert negatives Scrollen (z. B. Elastic Scrolling auf iOS)
+    if (currentScrollY < 0) return;
 
-  // Nach unten scrollen -> Verstecken | Nach oben scrollen -> Zeigen
-  if (currentScrollY > lastScrollY && currentScrollY > 80) {
-    header.classList.add('header--hidden');
-  } else {
-    header.classList.remove('header--hidden');
-  }
+    // Nach unten scrollen -> Verstecken | Nach oben scrollen -> Zeigen
+    if (currentScrollY > lastScrollY && currentScrollY > 80) {
+        header.classList.add('header--hidden');
+    } else {
+        header.classList.remove('header--hidden');
+    }
 
-  lastScrollY = currentScrollY;
+    lastScrollY = currentScrollY;
 });
 
 function switchMode(color) {
@@ -51,7 +64,7 @@ function switchMode(color) {
             "--color-secondary": "#8b44444b",
         },
         night: {
-           "--color-heading": "#ffffff",
+            "--color-heading": "#ffffff",
             "--color-bg": "#080808",
             "--color-primary": "#DADADA",
             "--color-secondary": "#d4d4d424",
