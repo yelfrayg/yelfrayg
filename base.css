@@ -41,6 +41,15 @@ html {
         border-color 0.5s ease;
 }
 
+.text {
+    opacity: 1;
+    font-size: var(--size-m);
+    line-height: 1.8;
+    color: var(--color-text);
+    letter-spacing: 0.5px;
+    word-spacing: 12px;
+}
+
 body {
     padding: 0;
     margin: 0;
@@ -204,6 +213,7 @@ main {
     margin: 0 auto;
     padding-top: 10vh;
     display: flex;
+    flex-direction: column;
     gap: 2rem;
     align-items: center;
     justify-content: center;
@@ -227,7 +237,7 @@ main {
         }
     }
 
-    .intro {
+    /* .intro {
         width: 40%;
 
         .intro-text {
@@ -236,6 +246,84 @@ main {
             font-weight: var(--font-weight-slim);
             letter-spacing: 10%;
             line-height: 170%;
+        }
+    } */
+
+    .menu-wrapper {
+        z-index: 10;
+        position: sticky;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: var(--color-bg);
+
+        .about-me-wrapper {
+            ul {
+                display: flex;
+                flex-direction: row;
+                list-style-type: none;
+                padding: var(--size-s);
+                gap: var(--size-3xl);
+
+                .about-me-entry {
+                    text-transform: uppercase;
+                    font-size: var(--size-m);
+                    background-color: var(--color-bg);
+
+                    a {
+                        color: var(--color-secondary);
+                        letter-spacing: 30%;
+                        line-height: 170%;
+                        margin-bottom: var(--size-s);
+                        text-decoration: none;
+                    }
+
+                    &:hover {
+                        a {
+                            color: var(--color-primary);
+                        }
+                    }
+                }
+
+                .about-me-entry.active {
+                    a {
+                        color: var(--color-primary);
+                    }
+                }
+            }
+        }
+    }
+
+    .about-me-content {
+        display: flex;
+        flex-direction: row;
+        padding: var(--size-s);
+        font-size: var(--size-m);
+        color: var(--color-primary);
+        /* background-color: grey; */
+        letter-spacing: 10%;
+        line-height: 170%;
+        gap: 2rem;
+        transition: transform 0.7s ease-in-out;
+
+        .about-me-section {
+            height: 100%;
+            min-height: 70vh;
+            width: 50vw;
+            flex: 0 0 50vw;
+            padding: var(--size-s);
+            background-color: var(--color-bg);
+            transition:
+                opacity 0.5s ease-in-out,
+                scale 0.5s ease-in-out;
+            opacity: 0.3;
+            scale: 0.5;
+            border-bottom: 1px solid var(--color-secondary);
+        }
+
+        .about-me-section.active {
+            opacity: 1;
+            scale: 1;
         }
     }
 }
@@ -349,7 +437,6 @@ main {
             .img-container {
                 height: 45vh;
                 transition: height 0.3s ease-in-out;
-            
 
                 img {
                     transform: scale(1.03);

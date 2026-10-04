@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
+    addActiveToMenuItem();
+    toggleAboutMeSections();
     const lightSwitch = document.querySelector(".light-switch");
 
     // Überprüfe, ob ein Theme im Local Storage gespeichert ist
@@ -119,4 +121,53 @@ function pressdfButton() {
         const topPosition = dfProject.getBoundingClientRect().top + window.scrollY - offset;
         window.scrollTo({ top: topPosition, behavior: "smooth" });
     })
+}
+
+function addActiveToMenuItem() {
+    const menuItems = document.querySelectorAll(".about-me-entry");
+    menuItems.forEach(item => {
+        item.addEventListener("click", () => {
+            menuItems.forEach(i => i.classList.remove("active"));
+            item.classList.add("active");
+        });
+    });
+}
+
+function toggleAboutMeSections() {
+    const menuItems = document.querySelectorAll(".about-me-entry");
+    const aboutMeSections = document.querySelectorAll(".about-me-section");
+    const aboutMeContent = document.querySelector(".about-me-content");
+
+    if (!menuItems.length || !aboutMeSections.length || !aboutMeContent) {
+        return;
+    }
+
+    const centerSection = (section) => {
+        const sectionCenter = section.offsetLeft + section.offsetWidth / 2;
+        const contentCenter = aboutMeContent.clientWidth / 2;
+        const offset = contentCenter - sectionCenter;
+
+        aboutMeContent.style.transform = `translateX(${offset}px)`;
+    };
+
+    menuItems.forEach((item, index) => {
+        item.addEventListener("click", () => {
+            menuItems.forEach((menuItem, i) => {
+                menuItem.classList.toggle("active", i === index);
+            });
+
+            aboutMeSections.forEach((section, i) => {
+                section.classList.toggle("active", i === index);
+            });
+
+            centerSection(aboutMeSections[index]);
+        });
+    });
+
+    menuItems[0].classList.add("active");
+    aboutMeSections.forEach((section, index) => {
+        section.classList.toggle("active", index === 0);
+    });
+
+    requestAnimationFrame(() => centerSection(aboutMeSections[0]));
 }
