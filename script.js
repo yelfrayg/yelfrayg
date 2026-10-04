@@ -38,24 +38,24 @@ document.addEventListener("projectsLoaded", () => {
 
 // Wenn nach unten gescrollt wird soll der Header verschwinden und beim nach oben scrollen wieder erscheinen
 
-let lastScrollY = window.scrollY;
-const header = document.getElementById('header');
+// let lastScrollY = window.scrollY;
+// const header = document.getElementById('header');
 
-window.addEventListener('scroll', () => {
-    const currentScrollY = window.scrollY;
+// window.addEventListener('scroll', () => {
+//     const currentScrollY = window.scrollY;
 
-    // Verhindert negatives Scrollen (z. B. Elastic Scrolling auf iOS)
-    if (currentScrollY < 0) return;
+//     // Verhindert negatives Scrollen (z. B. Elastic Scrolling auf iOS)
+//     if (currentScrollY < 0) return;
 
-    // Nach unten scrollen -> Verstecken | Nach oben scrollen -> Zeigen
-    if (currentScrollY > lastScrollY && currentScrollY > 80) {
-        header.classList.add('header--hidden');
-    } else {
-        header.classList.remove('header--hidden');
-    }
+//     // Nach unten scrollen -> Verstecken | Nach oben scrollen -> Zeigen
+//     if (currentScrollY > lastScrollY && currentScrollY > 80) {
+//         header.classList.add('header--hidden');
+//     } else {
+//         header.classList.remove('header--hidden');
+//     }
 
-    lastScrollY = currentScrollY;
-});
+//     lastScrollY = currentScrollY;
+// });
 
 function switchMode(color) {
     const themes = {

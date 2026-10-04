@@ -16,6 +16,10 @@
         <link rel="stylesheet" href="./base.css" />
         <link rel="stylesheet" href="./animation.css" />
         <link rel="stylesheet" href="./01.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"
+        />
         <link rel="icon" type="image/x-icon" href="./img/favicon-merge.jpg" />
         <title>Portfolio</title>
     </head>
@@ -116,9 +120,9 @@
                                     ... a web developer from Cologne, Germany.
                                     <br />
                                     I love to create functional and robust web
-                                    applications and backend systems. In my opinion, the
-                                    most important thing about a system is, that
-                                    it works and is easy to use.
+                                    applications and backend systems. In my
+                                    opinion, the most important thing about a
+                                    system is, that it works and is easy to use.
                                 </p>
                             </div>
                             <div class="welcome-key-value">
@@ -162,17 +166,22 @@
                                     <a href="#about-me-menu">What I Like</a>
                                 </li>
                                 <li class="about-me-entry">
-                                    <a href="#about-me-menu">What I Want To Achieve</a>
+                                    <a href="#about-me-menu"
+                                        >What I Want To Achieve</a
+                                    >
                                 </li>
                                 <li class="about-me-entry">
-                                    <a href="#about-me-menu">What Annoys Me</a>
+                                    <a href="#about-me-menu">Where I am at</a>
                                 </li>
                             </ul>
                         </nav>
                     </section>
 
                     <div class="about-me-content">
-                        <section id="about-me-01" class="about-me-section active">
+                        <section
+                            id="about-me-01"
+                            class="about-me-section active"
+                        >
                             <h2>What I Like</h2>
                             <p>
                                 I like to create functional and robust web
@@ -193,15 +202,32 @@
                             </p>
                         </section>
                         <section id="about-me-03" class="about-me-section">
-                            <h2>What Annoys Me</h2>
-                            <p>
-                                I get frustrated when I can't find a solution to a problem
-                                or when I'm not able to implement an idea the way I want to.
-                            </p>
+                            <div class="wrapper-03">
+                                <div class="content-wrapper">
+                                    <h2>MOVING</h2>
+                                    <p>
+                                        For my masters degree I am moving to
+                                        Wiesbaden, Germany. There I will
+                                        continue on studying media informatics
+                                        at the Hochschule RheinMain.
+                                    </p>
+                                </div>
+
+                                <div class="route-wrapper">
+                                    <div class="route-card">
+                                        <div class="tag">
+                                            <b>CGN</b> → <b>WIE</b> · Study
+                                            2026–2028
+                                        </div>
+                                        <div id="map"></div>
+                                    </div>
+                                </div>
+                            </div>
                         </section>
                     </div>
                 </div>
 
+                <!--
                 <div class="row align-middle">
                     <section class="transition-phrase">
                         <p class="transition-text">
@@ -213,11 +239,12 @@
                                 >how the web works...</span
                             >
                         </p>
-                        <!-- <button>
+                        <button>
                             <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" fill="#FFFFFF"><path d="m480-382.5-201-201 18.5-18L480-419l182.5-182.5 18.5 18-201 201Z"/></svg>
-                        </button> -->
+                        </button> 
                     </section>
                 </div>
+            -->
 
                 <div class="row align-left">
                     <div class="content-box">
@@ -360,6 +387,7 @@
         </main>
         <script src="./script.js"></script>
         <script src="./project.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
         <script src="./animations.js"></script>
     </body>
 </html>
