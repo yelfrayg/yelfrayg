@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     addActiveToMenuItem();
     toggleAboutMeSections();
+    toggleBulletPointContent();
     const lightSwitch = document.querySelector(".light-switch");
 
     // Überprüfe, ob ein Theme im Local Storage gespeichert ist
@@ -63,7 +64,7 @@ function switchMode(color) {
             "--color-heading": "#000000",
             "--color-bg": "#ffffff",
             "--color-primary": "#414141",
-            "--color-secondary": "#8b44444b",
+            "--color-secondary": "#9e9d9d4b",
         },
         night: {
             "--color-heading": "#ffffff",
@@ -170,4 +171,16 @@ function toggleAboutMeSections() {
     });
 
     requestAnimationFrame(() => centerSection(aboutMeSections[0]));
+}
+
+function toggleBulletPointContent() {
+    const bulletPoints = document.querySelectorAll(".bullet-point");
+    bulletPoints.forEach((bullet) => {
+        bullet.addEventListener("click", () => {
+            bulletPoints.forEach((b) => {
+                b.classList.remove("active");
+            });
+            bullet.classList.add("active");
+        });
+    });
 }

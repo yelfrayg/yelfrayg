@@ -211,7 +211,7 @@ main {
 .content-02 {
     width: 90%;
     margin: 0 auto;
-    padding-top: 10vh;
+    padding-top: 15vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -300,6 +300,7 @@ main {
         display: flex;
         flex-direction: row;
         padding: var(--size-s);
+        padding-top: 0;
         font-size: var(--size-m);
         color: var(--color-primary);
         /* background-color: grey; */
@@ -315,9 +316,9 @@ main {
 
         .about-me-section {
             display: flex;
-            flex-direction: column;
+            /* flex-direction: column; */
             gap: 2rem;
-            border-top: 5px solid var(--color-primary);
+            border-top: 5px solid var(--color-secondary);
             flex: 0 0 80vw;
             padding: var(--size-3xl);
             background-color: var(--color-bg);
@@ -407,10 +408,53 @@ main {
         }
     }
 }
+
 .leaflet-right {
     display: none;
 }
 
+.bullet-points-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .bullet-point-list {
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+        gap: var(--size-3xl);
+        padding: 0;
+
+        .bullet-point {
+            .bp-button {
+                background-color: transparent;
+                border: none;
+                color: var(--color-secondary);
+                font-size: var(--size-m);
+                cursor: pointer;
+                transition:
+                    color 0.3s ease-in-out,
+                    transform 0.3s ease-in-out;
+
+                &:hover {
+                    color: var(--color-primary);
+                    transform: translateX(10px);
+                    transform: color transform 0.3s ease-in-out;
+                }
+            }
+        }
+
+        .bullet-point.active {
+            transform: translateX(0px);
+            transition: transform 0.3s ease-in-out;
+
+            .bp-button {
+                color: var(--color-primary);
+            }
+        }
+    }
+}
 
 .intro {
     display: flex;
