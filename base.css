@@ -318,7 +318,7 @@ main {
             display: flex;
             /* flex-direction: column; */
             gap: 2rem;
-            border-top: 5px solid var(--color-secondary);
+            border-top: 0px solid var(--color-secondary);
             flex: 0 0 80vw;
             padding: var(--size-3xl);
             background-color: var(--color-bg);
@@ -338,6 +338,24 @@ main {
                 text-transform: uppercase;
             }
 
+            .achievement-points {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                padding-top: var(--size-xl);
+                gap: var(--size-l);
+                align-items: center;
+                list-style-type: none;
+
+                .achievement-point {
+                    font-size: var(--size-l);
+                    color: var(--color-primary);
+                    letter-spacing: 15%;
+                    line-height: 200%;
+                }
+            }
+
             .wrapper-03 {
                 width: 100%;
                 display: grid;
@@ -348,6 +366,7 @@ main {
                 .content-wrapper {
                     display: flex;
                     flex-direction: column;
+                    justify-content: space-between;
                     gap: 5rem;
 
                     h2 {
@@ -359,16 +378,15 @@ main {
                         line-height: 1;
                         text-transform: uppercase;
                     }
-                }
 
-                > p {
-                    align-self: center;
-                    max-width: 38rem;
-                    margin: 0;
-                    padding-right: 2rem;
-                    color: var(--color-primary);
-                    font-size: 1.5rem;
-                    line-height: 1.8;
+                    p {
+                        align-self: center;
+                        margin: 0;
+                        padding-right: 2rem;
+                        color: var(--color-primary);
+                        font-size: 1.25rem;
+                        line-height: 1.8;
+                    }
                 }
 
                 .route-wrapper {

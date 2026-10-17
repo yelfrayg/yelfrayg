@@ -115,13 +115,14 @@ function updateCursor(color) {
 // }
 
 function pressdfButton() {
-    const dfBtn = document.querySelector(".df-btn");
-    const dfProject = document.getElementById("project-3");
-    dfBtn.addEventListener("click", () => {
-        const offset = 40;
-        const topPosition = dfProject.getBoundingClientRect().top + window.scrollY - offset;
-        window.scrollTo({ top: topPosition, behavior: "smooth" });
-    })
+    // const dfBtn = document.querySelector(".df-btn");
+    // const dfProject = document.getElementById("project-3");
+    // dfBtn.addEventListener("click", () => {
+    //     const offset = 40;
+    //     const topPosition = dfProject.getBoundingClientRect().top + window.scrollY - offset;
+    //     window.scrollTo({ top: topPosition, behavior: "smooth" });
+    // })
+    console.log("pressdfButton function called");
 }
 
 function addActiveToMenuItem() {
@@ -138,6 +139,8 @@ function toggleAboutMeSections() {
     const menuItems = document.querySelectorAll(".about-me-entry");
     const aboutMeSections = document.querySelectorAll(".about-me-section");
     const aboutMeContent = document.querySelector(".about-me-content");
+    aboutMeContent.style.transform = `translateX(0px)`;
+
 
     if (!menuItems.length || !aboutMeSections.length || !aboutMeContent) {
         return;
