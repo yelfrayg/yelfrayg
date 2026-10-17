@@ -3,390 +3,145 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="Portfolio von Yassin El Fraygui." />
-        <meta name="author" content="Yassin El Fraygui" />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;700&display=swap"
-            rel="stylesheet"
-        />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap"
-            rel="stylesheet"
-        />
-        <link rel="stylesheet" href="./base.css" />
-        <link rel="stylesheet" href="./animation.css" />
-        <link rel="stylesheet" href="./01.css" />
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"
-        />
-        <link rel="icon" type="image/x-icon" href="./img/favicon-merge.jpg" />
-        <title>Portfolio</title>
+        <title>Portfolio - Yassin El Fraygui</title>
+        <link rel="stylesheet" href="base.css" />
     </head>
     <body>
-        <header id="header">
-            <h1 class="logo">yelfrayg.</h1>
-            <div class="light-switch day">
-                <svg
-                    width="32"
-                    height="44"
-                    viewBox="0 0 32 44"
-                    xmlns="http://www.w3.org/2000/svg"
-                >
-                    <rect
-                        x="18.5"
-                        y="0.5"
-                        width="1"
-                        height="19"
-                        stroke="currentColor"
-                    />
-                    <path
-                        d="M18.4736 1.35449L1.17578 24.1152L1.16992 24.1045L18.2988 1.26758L18.4736 1.35449Z"
-                        fill="#00AEFF"
-                        stroke="currentColor"
-                        stroke-width="2"
-                    />
-                    <path
-                        d="M30.8291 19.8945L13.7012 42.7324L13.5254 42.6445L30.8232 19.8838L30.8291 19.8945Z"
-                        fill="#00AEFF"
-                        stroke="currentColor"
-                        stroke-width="2"
-                    />
-                    <rect
-                        x="13.5"
-                        y="43.5"
-                        width="1"
-                        height="19"
-                        transform="rotate(-180 13.5 43.5)"
-                        fill="#00AEFF"
-                        stroke="currentColor"
-                    />
-                    <rect
-                        x="31.5"
-                        y="18.5"
-                        width="1"
-                        height="13"
-                        transform="rotate(90 31.5 18.5)"
-                        fill="#00AEFF"
-                        stroke="currentColor"
-                    />
-                    <rect
-                        x="0.5"
-                        y="25.5"
-                        width="1"
-                        height="13"
-                        transform="rotate(-90 0.5 25.5)"
-                        fill="#00AEFF"
-                        stroke="currentColor"
-                    />
-                </svg>
-            </div>
-        </header>
         <main>
-            <!-- <aside>
-                <ul class="menu">
-                    <li class="menu-button-li">
-                        <button class="menu-button">X</button>
-                    </li>
-                    <li class="menu-entry"><a href="#01">Home</a></li>
-                    <li class="menu-entry"><a href="#02">About me</a></li>
-                    <li class="menu-entry"><a href="#03">Projects</a></li>
-                    <li class="menu-entry"><a href="#04">Contact me!</a></li>
-                </ul>
-            </aside> -->
-
-            <div class="container">
-                <div class="row align-left">
-                    <div class="content-box">
-                        <span class="number" id="01">01</span>
-                        <h2>INTRO</h2>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <section class="intro">
-                        <div class="welcome-grid">
-                            <div class="img-wrapper">
-                                <img
-                                    src="./img/personal-foto.png"
-                                    alt="Yassin El Fraygui"
-                                />
-                            </div>
-                            <div class="welcome-text">
-                                <h2 class="welcome-text-heading">
-                                    Hi there, I'm Yassin!
-                                </h2>
-                                <p class="welcome-text-paragraph">
-                                    ... a web developer from Cologne, Germany.
-                                    <br />
-                                    I love to create functional and robust web
-                                    applications and backend systems. In my
-                                    opinion, the most important thing about a
-                                    system is, that it works and is easy to use.
-                                </p>
-                            </div>
-                            <div class="welcome-key-value">
-                                <ul class="key-list">
-                                    <li class="key" data-key="AGE">AGE</li>
-                                    <li class="key" data-key="LOCATION">
-                                        LOCATION
-                                    </li>
-                                    <li class="key" data-key="CURRENTLY">
-                                        CURRENTLY
-                                    </li>
-                                </ul>
-                                <ul class="value-list">
-                                    <li class="value" data-key="AGE">22</li>
-                                    <li class="value" data-key="LOCATION">
-                                        Cologne, Germany
-                                    </li>
-                                    <li class="value" data-key="CURRENTLY">
-                                        Studying media informatics
-                                    </li>
-                                </ul>
-                                <div class="corner-left-top"></div>
-                                <div class="corner-right-bottom"></div>
-                            </div>
+            <section class="section" id="section-1">
+                <span class="chapter-number" id="1">1 Introduction</span>
+                <div class="welcome-message-wrapper">
+                    <div class="welcome-message">
+                        <div class="img-wrapper">
+                            <img src="./img/personal-foto.jpg" alt="Welcome" />
                         </div>
-                    </section>
-                </div>
-
-                <div class="row align-left">
-                    <div class="content-box">
-                        <span class="number" id="02">02</span>
-                        <h2>ABOUT ME</h2>
-                    </div>
-                </div>
-
-                <div class="row content-02">
-                    <section class="menu-wrapper" id="about-me-menu">
-                        <nav class="about-me-wrapper">
-                            <ul>
-                                <li class="about-me-entry active">
-                                    <a href="#about-me-menu">What I Like</a>
-                                </li>
-                                <li class="about-me-entry">
-                                    <a href="#about-me-menu"
-                                        >What I Want To Achieve</a
-                                    >
-                                </li>
-                                <li class="about-me-entry">
-                                    <a href="#about-me-menu">Where I am at</a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </section>
-
-                    <div class="about-me-content">
-                        <section
-                            id="about-me-01"
-                            class="about-me-section active"
-                        >
-                            <div class="bullet-points-wrapper">
-                                <ul class="bullet-point-list">
-                                    <li class="bullet-point active"><button class="bp-button">Music</button></li>
-                                    <li class="bullet-point"><button class="bp-button">Reading</button></li>
-                                    <li class="bullet-point"><button class="bp-button">Aviation and cars</button></li>
-                                </ul>
-                            </div>
-                            <div class="text-content">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel sapien eget nunc efficitur tincidunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel sapien eget nunc efficitur tincidunt.
-                            </div>
-                        </section>
-                        <section id="about-me-02" class="about-me-section">
-                            <ul class="achievement-points">
-                                <li class="achievement-point">Improve Cloud and Backend Knowledge</li>
-                                <li class="achievement-point">Learn more about DevOps</li>
-                                <li class="achievement-point">Become a proper developer</li>
-                            </ul>
-                        </section>
-                        <section id="about-me-03" class="about-me-section">
-                            <div class="wrapper-03">
-                                <div class="content-wrapper">
-                                    <h2>MOVING</h2>
-                                    <p>
-                                        For my masters degree I am moving to
-                                        Wiesbaden, Germany. There I will
-                                        continue on studying media informatics
-                                        at the Hochschule RheinMain.
-                                    </p>
-                                </div>
-
-                                <div class="route-wrapper">
-                                    <div class="route-card">
-                                        <div class="tag">
-                                            <b>CGN</b> → <b>WIE</b> · Study
-                                            2026–2028
-                                        </div>
-                                        <div id="map"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                    </div>
-                </div>
-
-                <!--
-                <div class="row align-middle">
-                    <section class="transition-phrase">
-                        <p class="transition-text">
-                            Right now I'm working on an
-                            <button class="df-btn">online shop</button> for a
-                            family business, which is a great opportunity for me
-                            to master TypeScript and learn more about
-                            <span class="highlight-word"
-                                >how the web works...</span
-                            >
+                        <h1 class="welcome-heading">
+                            Hi there, nice to meet you!
+                        </h1>
+                        <p class="welcome-text">
+                            My name is Yassin and I'm a 22 year-old web
+                            developer from Cologne, Germany. <br />I am
+                            interested in backend and mainly cloud driven
+                            architectures. <br />My goal is to master the main
+                            AWS services and the cloud.
                         </p>
-                        <button>
-                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" fill="#FFFFFF"><path d="m480-382.5-201-201 18.5-18L480-419l182.5-182.5 18.5 18-201 201Z"/></svg>
-                        </button> 
-                    </section>
-                </div>
-            -->
-
-                <div class="row align-left">
-                    <div class="content-box">
-                        <span class="number" id="03">03</span>
-                        <h2>MY WORK</h2>
                     </div>
                 </div>
-                <div class="project-container-wrapper">
-                    <section class="project-container">
-                        <!-- <div class="project-card">
-                        <div class="img-container">
-                            <img
-                                src="./img/photo-log-yassin-el-fraygui-2025-10-16-08.png"
-                                alt="Project Image"
-                            />
-                        </div>
-                        <div class="project-info">
-                            <div class="project-text">
-                                <h3 class="project-title">Test</h3>
-                                <p class="project-description">
-                                    Lorem ipsum dolor sit amet, consectetur
-                                    adipiscing elit. Donec vel sapien eget nunc
-                                    efficitur tincidunt. Lorem ipsum dolor sit
-                                    amet, consectetur adipiscing elit.
+            </section>
+            <section class="section" id="section-2">
+                <span class="chapter-number" id="2">2 About me</span>
+            </section>
+            <section class="section" id="section-3">
+                <span class="chapter-number" id="3">3 Projects</span>
+                <article class="projects-wrapper">
+                    <div class="projects-container">
+                        <div class="project" id="project-1">
+                            <div class="p-left">
+                                <h2 class="project-title">Projekttitel</h2>
+                                <ul class="keywords">
+                                    <li class="skill">2025</li>
+                                    <li class="skill">Skill 1</li>
+                                    <li class="skill">Skill 2</li>
+                                </ul>
+                            </div>
+                            <div class="p-right">
+                                <p class="description">
+                                    Settle, a web app that helps people
+                                    understand official german government
+                                    documents. Users select a confusing passage
+                                    and get a plain-language explanation from a
+                                    self-hosted Qwen model (Ollama,
+                                    Node.js/Express, Docker) plus optional DeepL
+                                    translation.
                                 </p>
-                            </div>
-                            <div class="project-links">
-                                <a href="#">Zum Repo!</a>
-                                <a href="#">Zur Website!</a>
-                            </div>
-                        </div>
-                    </div> -->
-                    </section>
-                    <div class="skills">
-                        <h3 class="subheading-h3">My Tech Stack</h3>
-                        <div class="skills-banner">
-                            <div class="skills-row row-1">
-                                <div class="skills-track">
-                                    <span>HTML</span>
-                                    <span>CSS</span>
-                                    <span>JavaScript</span>
-                                    <span>Node.js</span>
-                                    <span>TypeScript</span>
-                                    <span>PostgreSQL</span>
-                                    <span>Git</span>
-                                    <span>GitHub</span>
-                                    <!-- Liste komplett wiederholen, damit der Loop nahtlos ist -->
-                                    <span>HTML</span><span>CSS</span
-                                    ><span>JavaScript</span> <span>Node.js</span
-                                    ><span>TypeScript</span
-                                    ><span>PostgreSQL</span><span>Git</span
-                                    ><span>GitHub</span>
-                                </div>
-                            </div>
-                            <!-- Hallo Test -->
-                            <div class="skills-row row-2">
-                                <div class="skills-track quick">
-                                    <span>Docker</span>
-                                    <span>AWS</span>
-                                    <span>Serverless Computing</span>
-                                    <span>REST APIs</span>
-                                    <span>Prisma ORM</span>
-                                    <span>Redis</span>
-                                    <span>pgAdmin</span>
-                                    <span>Figma</span>
-                                    <span>AWS</span>
-                                    <span>Ubuntu</span>
-                                    <span>Linux</span>
-                                    <span>Express.js</span>
-                                    <span>Terraform</span>
-                                    <!-- Liste komplett wiederholen, damit der Loop nahtlos ist -->
-                                    <span>Docker</span>
-                                    <span>AWS</span>
-                                    <span>Serverless Computing</span>
-                                    <span>REST APIs</span>
-                                    <span>Prisma ORM</span>
-                                    <span>Redis</span>
-                                    <span>pgAdmin</span>
-                                    <span>Figma</span>
-                                    <span>AWS</span>
-                                    <span>Ubuntu</span>
-                                    <span>Linux</span>
-                                    <span>Express.js</span>
-                                    <span>Terraform</span>
+                                <div class="button-wrapper">
+                                    <div class="svg-wrapper">
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 -960 960 960"
+                                        >
+                                            <path
+                                                d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"
+                                            />
+                                        </svg>
+                                    </div>
+                                    <a href="#" class="button">Learn more</a>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
 
-                <article class="connect-container">
-                    <div class="row align-left">
-                        <div class="content-box">
-                            <span class="number" id="04">04</span>
-                            <h2>CONTACT</h2>
+                        <div class="project" id="project-1">
+                            <div class="p-left">
+                                <h2 class="project-title">Projekttitel</h2>
+                                <ul class="keywords">
+                                    <li class="skill">2025</li>
+                                    <li class="skill">Skill 1</li>
+                                    <li class="skill">Skill 2</li>
+                                </ul>
+                            </div>
+                            <div class="p-right">
+                                <p class="description">
+                                    Settle, a web app that helps people
+                                    understand official german government
+                                    documents. Users select a confusing passage
+                                    and get a plain-language explanation from a
+                                    self-hosted Qwen model (Ollama,
+                                    Node.js/Express, Docker) plus optional DeepL
+                                    translation.
+                                </p>
+                                <div class="button-wrapper">
+                                    <div class="svg-wrapper">
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 -960 960 960"
+                                        >
+                                            <path
+                                                d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"
+                                            />
+                                        </svg>
+                                    </div>
+                                    <a href="#" class="button">Learn more</a>
+                                </div>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="row align-right">
-                        <section class="connect">
-                            <form
-                                action="https://formsubmit.co/deine-email@domain.com"
-                                method="POST"
-                                class="contact-form"
-                            >
-                                <input
-                                    type="text"
-                                    name="name"
-                                    required
-                                    class="form-name"
-                                    placeholder="Name"
-                                />
-                                <input
-                                    type="email"
-                                    name="email"
-                                    required
-                                    class="form-email"
-                                    placeholder="Email"
-                                />
-                                <input
-                                    type="text"
-                                    name="company"
-                                    class="form-company"
-                                    placeholder="Company"
-                                />
-                                <textarea
-                                    name="message"
-                                    required
-                                    class="form-message"
-                                    placeholder="Your message"
-                                ></textarea>
-                                <button type="submit" class="form-submit">
-                                    Send Message
-                                </button>
-                            </form>
-                        </section>
+                        <div class="project" id="project-1">
+                            <div class="p-left">
+                                <h2 class="project-title">Projekttitel</h2>
+                                <ul class="keywords">
+                                    <li class="skill">2025</li>
+                                    <li class="skill">Skill 1</li>
+                                    <li class="skill">Skill 2</li>
+                                </ul>
+                            </div>
+                            <div class="p-right">
+                                <p class="description">
+                                    Settle, a web app that helps people
+                                    understand official german government
+                                    documents. Users select a confusing passage
+                                    and get a plain-language explanation from a
+                                    self-hosted Qwen model (Ollama,
+                                    Node.js/Express, Docker) plus optional DeepL
+                                    translation.
+                                </p>
+                                <div class="button-wrapper">
+                                    <div class="svg-wrapper">
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 -960 960 960"
+                                        >
+                                            <path
+                                                d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"
+                                            />
+                                        </svg>
+                                    </div>
+                                    <a href="#" class="button">Learn more</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </article>
-            </div>
+            </section>
         </main>
-        <script src="./script.js"></script>
-        <script src="./project.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
-        <script src="./animations.js"></script>
     </body>
 </html>
