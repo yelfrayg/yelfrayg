@@ -5,6 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Portfolio - Yassin El Fraygui</title>
         <link rel="stylesheet" href="base.css" />
+        <link
+            rel="shortcut icon"
+            href="./img/Favicon.png"
+            type="image/x-icon"
+        />
     </head>
     <body>
         <main>
@@ -31,117 +36,33 @@
             <section class="section" id="section-2">
                 <span class="chapter-number" id="2">2 About me</span>
             </section>
+
             <section class="section" id="section-3">
                 <span class="chapter-number" id="3">3 Projects</span>
                 <article class="projects-wrapper">
                     <div class="projects-container">
-                        <div class="project" id="project-1">
-                            <div class="p-left">
-                                <h2 class="project-title">Projekttitel</h2>
-                                <ul class="keywords">
-                                    <li class="skill">2025</li>
-                                    <li class="skill">Skill 1</li>
-                                    <li class="skill">Skill 2</li>
-                                </ul>
-                            </div>
-                            <div class="p-right">
-                                <p class="description">
-                                    Settle, a web app that helps people
-                                    understand official german government
-                                    documents. Users select a confusing passage
-                                    and get a plain-language explanation from a
-                                    self-hosted Qwen model (Ollama,
-                                    Node.js/Express, Docker) plus optional DeepL
-                                    translation.
-                                </p>
-                                <div class="button-wrapper">
-                                    <div class="svg-wrapper">
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 -960 960 960"
-                                        >
-                                            <path
-                                                d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"
-                                            />
-                                        </svg>
-                                    </div>
-                                    <a href="#" class="button">Learn more</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="project" id="project-1">
-                            <div class="p-left">
-                                <h2 class="project-title">Projekttitel</h2>
-                                <ul class="keywords">
-                                    <li class="skill">2025</li>
-                                    <li class="skill">Skill 1</li>
-                                    <li class="skill">Skill 2</li>
-                                </ul>
-                            </div>
-                            <div class="p-right">
-                                <p class="description">
-                                    Settle, a web app that helps people
-                                    understand official german government
-                                    documents. Users select a confusing passage
-                                    and get a plain-language explanation from a
-                                    self-hosted Qwen model (Ollama,
-                                    Node.js/Express, Docker) plus optional DeepL
-                                    translation.
-                                </p>
-                                <div class="button-wrapper">
-                                    <div class="svg-wrapper">
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 -960 960 960"
-                                        >
-                                            <path
-                                                d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"
-                                            />
-                                        </svg>
-                                    </div>
-                                    <a href="#" class="button">Learn more</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="project" id="project-1">
-                            <div class="p-left">
-                                <h2 class="project-title">Projekttitel</h2>
-                                <ul class="keywords">
-                                    <li class="skill">2025</li>
-                                    <li class="skill">Skill 1</li>
-                                    <li class="skill">Skill 2</li>
-                                </ul>
-                            </div>
-                            <div class="p-right">
-                                <p class="description">
-                                    Settle, a web app that helps people
-                                    understand official german government
-                                    documents. Users select a confusing passage
-                                    and get a plain-language explanation from a
-                                    self-hosted Qwen model (Ollama,
-                                    Node.js/Express, Docker) plus optional DeepL
-                                    translation.
-                                </p>
-                                <div class="button-wrapper">
-                                    <div class="svg-wrapper">
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 -960 960 960"
-                                        >
-                                            <path
-                                                d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"
-                                            />
-                                        </svg>
-                                    </div>
-                                    <a href="#" class="button">Learn more</a>
-                                </div>
-                            </div>
-                        </div>
+                        <!-- Projects will be dynamically inserted here -->
                     </div>
                 </article>
             </section>
+
+            <section class="full-screen">
+                <div class="full-screen-content">
+                    <span
+                        ><code id="full-screen-code"
+                            >[esc] to close window</code
+                        ></span
+                    >
+                    <div class="img-wrapper">
+                        <img
+                            id="full-screen-image"
+                            src="./img/praxisprojekt-1.png"
+                            alt="Full Screen"
+                        />
+                    </div>
+                </div>
+            </section>
         </main>
     </body>
+    <script src="./project.js"></script>
 </html>

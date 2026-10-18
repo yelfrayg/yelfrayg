@@ -13,5 +13,3 @@
 - **DB**: Postgres, pgAdmin, Prisma
 - **Deployment:** Terraform
 - **Tools:** Git, Figma, Docker
-
-
