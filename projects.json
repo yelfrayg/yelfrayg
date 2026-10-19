@@ -2,34 +2,70 @@
     "projects": [
         {
             "title": "OmniMize",
-            "description": "Web application that optimizes photos in terms of size for web use.",
+            "description": "Web application that optimizes photos for web use based on their size.",
             "year": 2024,
-            "image": "/img/omnimize.png",
-            "technologies": ["HTML", "CSS", "JavaScript", "Node.js", "MailerSend", "Sharp"],
-            "link": "https://github.com/MaximilianKellner/ep-2024-web-development"
+            "images": ["./img/omnimize.png"],
+            "technologies": [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "Node.js",
+                "MailerSend",
+                "Sharp"
+            ],
+            "links": {
+                "repo": "https://github.com/MaximilianKellner/ep-2024-web-development"
+            }
         },
         {
-            "title": "Proxy Parcelbox",
-            "description": "Web application for managing and tracking personal projects.",
-            "year": 2024,
-            "technologies": ["HTML", "CSS", "JavaScript", "PostgreSQL", "MailerSend", "Docker"],
-            "link": "#"
-        },
-        {
-            "title": "SETTLE",
-            "description": "Web application for translating legal documents into diff. languages.",
+            "title": "Praxisprojekt",
+            "description": "Settle, a web app that helps people understand official german government documents. Users select a confusing passage and get a plain-language explanation from a self-hosted Qwen model (Ollama, Node.js/Express, Docker) plus optional DeepL translation.",
             "year": 2025,
-            "image": "/img/photo-log-yassin-el-fraygui-2025-10-16-08.png",
-            "technologies": ["HTML", "CSS", "JavaScript", "Node.js", "DeepL", "Prisma Postgres", "Ollama", "Docker"],
-            "link": "https://yasabi04.github.io/praxisprojekt-ss-2025/Prototyp/frontend/html/"
+            "images": ["./img/praxisprojekt-1.png"],
+            "technologies": [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "Node.js",
+                "DeepL",
+                "Prisma Postgres",
+                "Ollama",
+                "Docker"
+            ],
+            "links": {
+                "repo": "https://github.com/yelfrayg/praxisprojekt-ss-2025"
+            }
         },
         {
-            "title": "Bachelor",
-            "description": "Let's see what's going to happen :)",
-            "year": "in development",
-            "image": "/img/temp-photo.jfif",
-            "technologies": [],
-            "link": "#"
+            "title": "Bachelorthesis",
+            "description": "A serverless AWS application that tracks flights across Europe in real time and pushes it to clients via WebSockets. The same backend has also been built on a local Node.js server to compare both approaches on architecture, maintainability, scalability, cost and complexity.",
+            "year": "2025/26",
+            "images": ["./img/bachelor.png", "./img/aeroplane.png"],
+            "technologies": [
+                "JavaScript",
+                "Node.js",
+                "AWS Lambda",
+                "AWS API Gateway",
+                "DynamoDB",
+                "Terraform",
+                "Docker",
+                "Leaflet",
+                "EC2"
+            ],
+            "links": {
+                "repo": "https://github.com/yelfrayg/bachelor-el-fraygui-25-26",
+                "website": "https://yelfrayg.github.io/bachelor-el-fraygui-25-26/frontend/map.html"
+            }
+        },
+        {
+            "title": "bits.",
+            "description": "Auction webside built using PHP and Laravel.",
+            "year": 2026,
+            "images": ["./img/bits-1.png", "./img/bits-2.png"],
+            "technologies": ["PHP", "Blade", "Laravel", "JavaScript"],
+            "links": {
+                "repo": "https://github.com/yelfrayg/auction-house"
+            }
         }
     ]
 }

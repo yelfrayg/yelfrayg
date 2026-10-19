@@ -1,150 +1,68 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Portfolio - Yassin El Fraygui</title>
+        <link rel="stylesheet" href="base.css" />
         <link
-            href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;700&display=swap"
-            rel="stylesheet"
+            rel="shortcut icon"
+            href="./img/Favicon.png"
+            type="image/x-icon"
         />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap"
-            rel="stylesheet"
-        />
-        <link rel="stylesheet" href="./base.css" />
-        <link rel="stylesheet" href="./animation.css" />
-        <link rel="icon" type="image/x-icon" href="./img/favicon-merge.jpg" />
-        <title>Portfolio</title>
     </head>
     <body>
-        <header>
-            <h1 class="logo">yelfrayg.</h1>
-            <ul class="data-group">
-                <li class="data-day"></li>
-                <li class="data-date"></li>
-                <li class="data-time"></li>
-            </ul>
-        </header>
         <main>
-            <aside>
-                <ul class="menu">
-                    <li class="menu-entry"><a href="#01">Home</a></li>
-                    <li class="menu-entry"><a href="#02">About me</a></li>
-                    <li class="menu-entry"><a href="#03">Projects</a></li>
-                    <li class="menu-entry"><a href="#04">Contact me!</a></li>
-                </ul>
-            </aside>
+            <section class="section" id="section-1">
+                <span class="chapter-number" id="1">1 Introduction</span>
+                <div class="welcome-message-wrapper">
+                    <div class="welcome-message">
+                        <div class="img-wrapper">
+                            <img src="./img/personal-foto.jpg" alt="Welcome" />
+                        </div>
+                        <h1 class="welcome-heading">
+                            Hi there, nice to meet you!
+                        </h1>
+                        <p class="welcome-text">
+                            My name is Yassin and I'm a 22 year-old web
+                            developer from Cologne, Germany. <br />I am
+                            interested in backend and mainly cloud driven
+                            architectures. <br />My goal is to master the main
+                            AWS services and the cloud.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="section" id="section-2">
+                <span class="chapter-number" id="2">2 About me</span>
+            </section>
 
-            <h2 class="chapter" id="01">01</h2>
-            <section class="intro">
-                <h3 class="intro-heading">Hi!</h3>
-                <p class="intro-text fade-in-section">
-                    my name is Yassin. I'm a 21 year-old german, who is
-                    currently studying
-                    <a
-                        href="https://www.medieninformatik.th-koeln.de/"
-                        class="link"
-                        >media informatics</a
+            <section class="section" id="section-3">
+                <span class="chapter-number" id="3">3 Projects</span>
+                <article class="projects-wrapper">
+                    <div class="projects-container">
+                        <!-- Projects will be dynamically inserted here -->
+                    </div>
+                </article>
+            </section>
+
+            <section class="full-screen">
+                <div class="full-screen-content">
+                    <span
+                        ><code id="full-screen-code"
+                            >[esc] to close window</code
+                        ></span
                     >
-                    at TH Cologne.
-                </p>
-                <!-- <p class="intro-text">
-                <span class="fade-in">I try to </span>
-                <span class="highlight-word">solve problems</span>
-                <span class="fade-in"> people actually have - not ones dreamt up in an eco-allotment coffee shop.</span>
-            </p> -->
-                <p class="intro-text">
-                    I build things that
-                    <span class="highlight-word">work</span>. Shocking Concept,
-                    I know.
-                </p>
-                <p class="intro-text">
-                    Currently focussing on
-                    <span class="highlight-word">WebDev</span> and
-                    <span class="highlight-word">social projects!</span>
-                </p>
+                    <div class="img-wrapper">
+                        <img
+                            id="full-screen-image"
+                            src="./img/praxisprojekt-1.png"
+                            alt="Full Screen"
+                        />
+                    </div>
+                </div>
             </section>
-
-            <h2 class="chapter" id="02">02</h2>
-            <section class="intro">
-                <h3 class="intro-heading">About me</h3>
-                <p class="intro-text fade-in-section">
-                    I am a <span class="highlight-word">developer</span> with a
-                    focus on creating innovative solutions that
-                    <span class="highlight-word">make a difference</span>.
-                </p>
-                <p class="intro-text">
-                    After graduating from school in 2022, I immediately started
-                    studying at
-                    <a href="https://www.th-koeln.de/" class="link"
-                        >TH Cologne</a
-                    >. Within the past three years, I encountered many ...
-                </p>
-            </section>
-
-            <h2 class="chapter" id="03">03</h2>
-            <section class="intro-about">
-                <h3 class="intro-heading">My latest projects</h3>
-                <p class="intro-text">
-                    By clicking on each card, you will be redirected to the
-                    repository on <span class="highlight-word">GitHub</span>.
-                </p>
-                <div class="project-container"></div>
-            </section>
-
-            <h2 class="chapter" id="04">04</h2>
-            <section class="connect">
-                <h4 class="connect-slogan">
-                    Ready to start something
-                    <span class="highlight-word">Great?</span>Let's connect!
-                </h4>
-                <form
-                    action="https://formsubmit.co/deine-email@domain.com"
-                    method="POST"
-                    class="contact-form"
-                >
-                    <input
-                        type="text"
-                        name="name"
-                        required
-                        class="form-name"
-                        placeholder="Name"
-                    />
-                    <input
-                        type="email"
-                        name="email"
-                        required
-                        class="form-email"
-                        placeholder="Email"
-                    />
-                    <input
-                        type="text"
-                        name="company"
-                        class="form-company"
-                        placeholder="Company"
-                    />
-                    <textarea
-                        name="message"
-                        required
-                        class="form-message"
-                        placeholder="Your message"
-                    ></textarea>
-                    <button type="submit" class="form-submit">
-                        Send Message
-                    </button>
-                </form>
-            </section>
-            <div class="advisor-banner">
-                <h4 class="advisor-heading">Note</h4>
-                <p class="advisor-text">
-                    For better accessibility and readability at night, I decided
-                    to provide this website with an automatic color switch.
-                </p>
-                <button class="advisor-button">X</button>
-            </div>
         </main>
-        <footer></footer>
-        <script src="./script.js"></script>
-        <script src="./fetch.js"></script>
     </body>
+    <script src="./project.js"></script>
 </html>
